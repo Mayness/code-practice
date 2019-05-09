@@ -1,0 +1,29 @@
+function longestConsec(strarr, k) {
+  // your code
+  const len = strarr.length;
+  if (len === 0 || k > len || k <= 0 ) {
+    return '';
+  }
+  let max = strarr[ 0 ];
+  let index = 0;
+  for (let i = 1; i < len; i++) {
+    if (strarr[i].length > max.length) {
+       max = strarr[i];
+       index = i;
+    }
+  }
+  let right = '';
+  let left = '';
+  if (index+k <= len && index+1-k >= 0) {
+    left = strarr.splice(index-k+1, k).join('');
+    right = strarr.splice(index, k).join('');
+  } else if (index+k > len) {
+    left = strarr.splice(index-k+1, k).join('');
+  } else if (index+1-k < 0) {
+    right = strarr.splice(index, k).join('');
+  }
+  console.log(left);
+  console.log(right);
+  return left.length > right.length ? left : right;
+}
+
