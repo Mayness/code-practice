@@ -21,20 +21,24 @@
  *     this.left = this.right = null;
  * }
  */
+
 /**
  * @param {number[]} nums
  * @return {TreeNode}
  */
-var sortedArrayToBST = function(nums) {
+var sortedArrayToBST = function (nums) {
   if (nums.length === 1) {
-      return new TreeNode(nums[ 0 ]);
-  } else if(nums.length > 1) {
-      const mid = Math.ceil(nums.length/2);
-      const tree = new TreeNode(nums[ mid - 1 ]);
-      tree.left = sortedArrayToBST(nums.slice(0,mid - 1));
-      tree.right = sortedArrayToBST(nums.slice(mid, nums.length));
-      return tree;
+    // 这里为了节省性能，就不用再寻找中位数了
+    return new TreeNode(nums[0]);
+  } else if (nums.length > 1) {
+    // 寻找中位数
+    const mid = Math.ceil(nums.length / 2);
+    const tree = new TreeNode(nums[mid - 1]);
+    // 将左右两边的数组再进行递归运算
+    tree.left = sortedArrayToBST(nums.slice(0, mid - 1));
+    tree.right = sortedArrayToBST(nums.slice(mid, nums.length));
+    return tree;
   } else {
-      return null;
+    return null;
   }
 };
