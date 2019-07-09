@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const Single = (function () {
+      let instance;
+      function singleFn (arg) {
+        return {
+          getNum(num) {
+            console.log(num);
+          },
+          res: arg,
+        }
+      }
+
+      return (arg) => {
+        if (!instance) {
+          instance = new singleFn(arg)
+        }
+        return instance;
+      }
+    })()
+
+    const a = Single('123');
+    const b = Single('456');
+    console.log(a, b);
+  </script>
+</body>
+
+</html>
