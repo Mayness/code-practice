@@ -45,5 +45,3 @@ var isValidBST = function(root) {
   orderSearch(root);
   return isValidBSTFlag;
 };
-var test;
-
