@@ -1,34 +1,21 @@
-n = 1   1
-()
+## 获得中位数
 
-n = 2   2
-()()
-(())
-
-n = 3  5
-((()))
-()(())
-(())()
-()()()
-(()())
-
-n = 4   9
-()()(())    
-()(())()  
-(())()()     3
-()()()()      1
-(()()())      5
-。。。4
-
-
-((()))()
-
-
--1 1
--1 1 -2 2
--1 -2 1 2
-
-
-[1,2,3,4,5,3]
-
-0.12(3)
+```javascript
+let search = (arr, target) => {
+  let begin = 0;
+  let end = arr.length - 1; //写成这样，相当于搜索区间为[begin, end]，这是一个闭区间
+  while (begin <= end) {
+    //重点: 因为闭区间，所以到了begin等于end时，其实区间内还有一个值要判断，
+    //因此只有begin>end的时候才能停止
+    let mid = (begin + end) >>> 1; //位运算，无符号右移一位，同Math.floor((begin+end)/2)
+    if (arr[mid] == target) {
+      return mid;
+    } else if (arr[mid] > target) {
+      end = mid - 1; //因为是闭区间，搜索范围变为[left, mid - 1]
+    } else if (arr[mid] < target) {
+      begin = mid + 1; //搜索范围变成[mid + 1, end]
+    }
+  }
+  return -1;
+};
+```
