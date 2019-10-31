@@ -15,29 +15,34 @@
 你可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。
 
 ## 分析
-
-快排搜索
+使用快排的概念结合搜索，只用搜索大于基准值或小于基准值的一侧  
 
 ## 解答
 
 ```javascript
 var findKthLargest = function(nums, k) {
-  var sort = function(nums) {
-    if (nums.length <= 1) return nums;
-    const root = nums[0];
-    const left = [];
-    const right = [];
-    for (let item of nums.slice(1)) {
-      if (item > root) {
-        right.push(item);
-      } else {
-        left.push(item);
-      }
+  let repeat = 0; // 保存重复的基准值的数量
+  const root = nums[0];
+  const left = [];
+  const right = [];
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] > root) {
+      right.push(nums[i]);
+    } else if (nums[i] < root) {
+      left.push(nums[i]);
+    } else {
+      repeat++;
     }
-    return sort(right)
-      .concat([root])
-      .concat(sort(left));
-  };
-  return sort(nums)[k - 1];
+  }
+  // 如果right大于基准的数组的长度 小于 k - 1，【因为需要抛出root,所以是k-1】)
+  if (right.length > k - 1) {
+    return findKthLargest(right, k);
+  }
+  // 如果right.length+重复的基准值的数量 >= k - 1，那么查找的值在基准值中
+  if (right.length + repeat >= k - 1) return root;
+  // 如果right.length+重复的基准值的数量 < k - 1，那么查找的值在基准值的左侧，即小于基准值的数组，另外需要重新计算k值，排除掉 右侧的数量 + 基准数1 + 重复的基准值
+  if (right.length + repeat < k - 1) {
+    return findKthLargest(left, k - right.length - 1 - repeat);
+  }
 };
 ```
