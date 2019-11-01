@@ -35,14 +35,10 @@ var findKthLargest = function(nums, k) {
     }
   }
   // 如果right大于基准的数组的长度 小于 k - 1，【因为需要抛出root,所以是k-1】)
-  if (right.length > k - 1) {
-    return findKthLargest(right, k);
-  }
+  if (right.length > k - 1) return findKthLargest(right, k);
   // 如果right.length+重复的基准值的数量 >= k - 1，那么查找的值在基准值中
   if (right.length + repeat >= k - 1) return root;
   // 如果right.length+重复的基准值的数量 < k - 1，那么查找的值在基准值的左侧，即小于基准值的数组，另外需要重新计算k值，排除掉 右侧的数量 + 基准数1 + 重复的基准值
-  if (right.length + repeat < k - 1) {
-    return findKthLargest(left, k - right.length - 1 - repeat);
-  }
+  if (right.length + repeat < k - 1) return findKthLargest(left, k - right.length - 1 - repeat);
 };
 ```
