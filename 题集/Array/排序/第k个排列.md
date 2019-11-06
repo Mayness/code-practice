@@ -44,7 +44,7 @@
 ```javascript
 var getPermutation = function(n, k) {
   let index = 0;
-  const getNumber = function(array, str) {
+  const getNumber = function(array, str = '') {
     if (array.length === 0 && ++index === k) {
       return str;
     }
@@ -58,9 +58,10 @@ var getPermutation = function(n, k) {
     }
   };
   const generaArray = new Array(n).fill(0).map((_, index) => index + 1);
-  return getNumber(generaArray, '');
+  return getNumber(generaArray);
 };
 ```
+
 
 ## 解法 2：全排列
 
