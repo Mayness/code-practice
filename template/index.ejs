@@ -20,9 +20,10 @@
 %>
 
 <!-- content -->
-<% (function renderView(data, index = 2) {
+<% 
+(function renderView(data, index = 2) {
   for (const item in data) {
-    if (isObject(data[ item ])) {
+    if (isObject(data[ item ])) { 
       if (tableFlag) {
         // 渲染table end 标签
         tableFlag = false %>
@@ -40,7 +41,7 @@
 <tbody>
 <thead>
   <th>topic</th>
-  <th>update</th>
+  <th>update</th>
 </thead>
     <% } %>
 <tr>

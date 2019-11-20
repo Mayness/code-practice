@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const ejs = require('ejs');
+const marked = require('marked');
 
 const entry = './group';
 const template = {
@@ -16,7 +17,8 @@ const resetUpdate = false;
   const view = await ejs.renderFile(template.file, {
     data: pathObj
   });
-  fs.writeFileSync(output, view);
+  const md = marked(view);
+  fs.writeFileSync(output, md);
 })();
 
 async function readFile(root) {
