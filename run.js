@@ -5,8 +5,8 @@ const ejs = require('ejs');
 
 const entry = './group';
 const template = {
-  file: './template/index.ejs',
-  cache: './template/cache.json'
+  file: './.template/index.ejs',
+  cache: './.template/cache.json'
 };
 const output = './README.md';
 const resetUpdate = false;
