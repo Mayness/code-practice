@@ -15,7 +15,7 @@
 </thead>
 
 <tr>
-  <td style="width: 300px;">
+  <td width="300px">
         <a href='group/Array/动态规划/ 买卖股票的最佳时机（单笔交易）.md'> 买卖股票的最佳时机（单笔交易）</a>
       </td>
       <td style="text-align: center;">
