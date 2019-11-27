@@ -1,4 +1,9 @@
-[ 0, 1 ]
+node: A
+node: B
 
+common: C
 
-// -4  2
+lengthA = A + C;
+lengthB = B + C;
+
+lengthA - lengthB = A - B;
