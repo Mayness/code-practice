@@ -438,7 +438,7 @@
   
   <tr>
     <td style="width: 300px;">
-        <a href='group/Array/搜索/得到一个数组值的中点.md'>得到一个数组值的中点</a>
+        <a href='group/Array/搜索/得到一个数组值的中点.md'>得到一个数组值的中点</a>
       </td>
       <td style="text-align: center;">
         <p>0</p>
