@@ -1,6 +1,6 @@
 <!-- tools -->
 <%
-  let tableFlag = false;
+  let tableCloseFlag = false;
   function isObject(data) {
     return Object.prototype.toString.call(data) === '[object Object]'
   }
@@ -24,36 +24,37 @@
 (function renderView(data, index = 2) {
   for (const item in data) {
     if (isObject(data[ item ])) { 
-      if (tableFlag) {
+      if (tableCloseFlag) {
         // 渲染table end 标签
-        tableFlag = false %>
-</tbody>
+        tableCloseFlag = false %>
+  </tbody>
 </table>
       <% } %>
 <%- buildTitle(item, index)  %>
     <% 
+    // 若是普通对象则进行递归渲染
     renderView(data[ item ], index + 1);
   } else { 
     // 渲染table start 标签
-    if (!tableFlag) {
-      tableFlag = true %>
+    if (!tableCloseFlag) {
+      tableCloseFlag = true %>
 <table style="margin-left: 10px;">
-<tbody>
-<thead>
-  <th>topic</th>
-  <th>update</th>
-</thead>
+  <thead>
+    <th>topic</th>
+    <th>update</th>
+  </thead>
+  <tbody>
     <% } %>
-<tr>
-  <%- buildLink(item, data[ item ]) %>
-</tr>
+  <tr>
+    <%- buildLink(item, data[ item ]) %>
+  </tr>
     <% } %>
   <% } %>
 <% })(data)
 
 // 函数执行完毕需要检测是否闭合table标签
-if (tableFlag) {
+if (tableCloseFlag) {
 %>
-</tbody>
+  </tbody>
 </table>
 <% } %>

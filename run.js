@@ -11,7 +11,7 @@ const template = {
 const output = './README.md';
 const resetUpdate = false;
 
-(async function main() {
+(async () => {
   const pathObj = await readFile(entry);
   const view = await ejs.renderFile(template.file, {
     data: pathObj
@@ -19,6 +19,18 @@ const resetUpdate = false;
   fs.writeFileSync(output, view);
 })();
 
+/**
+ * 递归读取文件，并输出文件目录树
+ * @param {string} root 入口路径path
+ * @returns {object}
+ * path: {
+ *   filename: [ filePath, updateNumber, fileHash ]
+ *              [or]
+ *   path: {
+ *      xxx: xxxx 
+ *   }
+ * } 
+ */
 async function readFile(root) {
   let res = {};
   const original = fs.readFileSync(template.cache, 'utf-8');
@@ -31,7 +43,7 @@ async function readFile(root) {
       if (stat.isDirectory()) {
         recursionFile((res[rename] = {}), filePath, origin[rename]);
       } else if (/(.md)$/g.test(item)) {
-        let index = 0;
+        let update = 0;
         const buffer = fs.readFileSync(filePath);
         const hash = crypto.createHash('sha256');
         hash.update(buffer);
@@ -39,9 +51,9 @@ async function readFile(root) {
         // 比较内容hash，若修改则+1
         if (!resetUpdate && origin[rename]) {
           const num = origin[rename][1];
-          index = origin[rename][2] !== fileHash ? num + 1 : num;
+          update = origin[rename][2] !== fileHash ? num + 1 : num;
         }
-        res[rename] = [filePath, index, fileHash];
+        res[rename] = [filePath, update, fileHash];
       }
     }
   }
