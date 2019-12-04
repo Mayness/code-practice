@@ -6,6 +6,7 @@ Function.prototype.before = function(fn) {
     return self.apply(self, arguments);
   };
 };
+
 Function.prototype.after = function(fn) {
   const self = this;
   // 这个时候的 self 等于 test.before 函数，其中test.before函数中又包含test函数
