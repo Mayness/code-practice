@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "make:docs": "node run.js"
+  },
   "devDependencies": {
     "ejs": "^2.7.4"
   }
