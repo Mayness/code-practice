@@ -19,7 +19,7 @@
         <a href='group/Array/动态规划/ 买卖股票的最佳时机（单笔交易）.md'> 买卖股票的最佳时机（单笔交易）</a>
       </td>
       <td style="text-align: center;">
-        <p>0</p>
+        <p>1</p>
       </td>
   </tr>
     
@@ -29,7 +29,7 @@
         <a href='group/Array/动态规划/ 买卖股票的最佳时机（多笔交易）.md'> 买卖股票的最佳时机（多笔交易）</a>
       </td>
       <td style="text-align: center;">
-        <p>0</p>
+        <p>1</p>
       </td>
   </tr>
     
@@ -265,7 +265,7 @@
         <a href='group/Array/得到中位数.md'>得到中位数</a>
       </td>
       <td style="text-align: center;">
-        <p>0</p>
+        <p>1</p>
       </td>
   </tr>
     
@@ -771,6 +771,16 @@
   <tr>
     <td style="width: 300px;">
         <a href='group/二叉树/二叉树的最近公共祖先.md'>二叉树的最近公共祖先</a>
+      </td>
+      <td style="text-align: center;">
+        <p>1</p>
+      </td>
+  </tr>
+    
+  
+  <tr>
+    <td style="width: 300px;">
+        <a href='group/二叉树/二叉树的锯齿形层次遍历.md'>二叉树的锯齿形层次遍历</a>
       </td>
       <td style="text-align: center;">
         <p>0</p>
