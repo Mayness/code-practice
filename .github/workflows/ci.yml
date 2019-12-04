@@ -23,7 +23,7 @@ jobs:
     - name: Commit files
       run: |
         echo ${{ github.ref }}
-        git add README.md
+        git add README.md .template/
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "ci(README): Automated build" -a | exit 0
