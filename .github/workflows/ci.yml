@@ -26,7 +26,7 @@ jobs:
         git add README.md .template/
         git config --local user.email "githubactionbot+wp@gmail.com"
         git config --local user.name "WP Github Action Bot"
-        git commit -m "ci(README): Automated build" -a | exit 0
+        git commit -m "ci: Automated build" -a | exit 0
     - name: Push changes
       if: github.ref == 'refs/heads/master'
       uses: ad-m/github-push-action@master
