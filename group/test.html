@@ -9,37 +9,44 @@
   <body>
     <script>
       /*
-        给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
-
-        为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
-
-        说明：不允许修改给定的链表。
-
-        示例 1：
-        输入：head = [3,2,0,-4], pos = 1
-        输出：tail connects to node index 1
-        解释：链表中有一个环，其尾部连接到第二个节点。
- 
-        示例 2：
-        输入：head = [1,2], pos = 0
-        输出：tail connects to node index 0
-        解释：链表中有一个环，其尾部连接到第一个节点。
-
-        示例 3：
-        输入：head = [1], pos = -1
-        输出：no cycle
-        解释：链表中没有环。
-
-
-        f = 2s
-        f = s + nb;
-
-        f = 2s;
-        s = nb;
-
-
-        a + nb;
+        我们用一个变量去来记录迄今为止发现的最大正方形的边长，以及用一个变量记录当前正方形的大小，两个变量都初始化为 0；
+        从矩阵的左上角开始搜索 1，找到 0 不需要做任何操作，只要找到 1 我们就试图找到由 1 组成的最大正方形；
+        为此我们向右和向下移动，临时增加列索引和行索引，然后用标志标记该行列是否全都为 1；
+        如果全都为 1，则继续检索行列，如果找到 0，便停止移动，更新最大正方形的边长。然后从最初发现 1 的元素旁边遍历矩阵，直到矩阵的所有元素都被遍历。
       */
+      var maximalSquare = function(matrix) {
+        const rows = matrix.length;
+        const cols = matrix[0] ? matrix[0].length : 0;
+        let max = 0;
+        for (let i = 0; i < rows; i++) {
+          for (let j = 0; j < cols; j++) {
+            if (matrix[i][j] === '0') continue;
+            let item = 1;
+            let flag = true;
+            while (i + item < rows && j + item < cols) {
+              for (let k = i; k <= i + item; k++) {
+                if (matrix[k][j + item] === '0') {
+                  flag = false;
+                }
+              }
+              for (let k = j; k <= j + item; k++) {
+                if (matrix[i + item][k] === '0') {
+                  flag = false;
+                }
+              }
+              if (flag) {
+                item++
+              } else {
+                break;
+              };
+            }
+            max = Math.max(item, max);
+          }
+        }
+        return Math.pow(max, 2);
+      };
+      const res = maximalSquare([["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]);
+      console.log(res);
     </script>
   </body>
 </html>
