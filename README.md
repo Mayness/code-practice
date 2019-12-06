@@ -19,7 +19,7 @@
         <a href='group/Array/动态规划/ 买卖股票的最佳时机（单笔交易）.md'> 买卖股票的最佳时机（单笔交易）</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -29,7 +29,7 @@
         <a href='group/Array/动态规划/ 买卖股票的最佳时机（多笔交易）.md'> 买卖股票的最佳时机（多笔交易）</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -173,7 +173,7 @@
         <a href='group/Array/回溯算法/最大子序和.md'>最大子序和</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>4</p>	
       </td>	
   </tr>	
     	
@@ -265,7 +265,7 @@
         <a href='group/Array/得到中位数.md'>得到中位数</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -551,7 +551,7 @@
         <a href='group/Function/AOP.md'>AOP</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>3</p>	
       </td>	
   </tr>	
     	
@@ -773,7 +773,7 @@
         <a href='group/二叉树/二叉树的最近公共祖先.md'>二叉树的最近公共祖先</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -901,7 +901,7 @@
         <a href='group/链表/合并K个排序链表.md'>合并K个排序链表</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -951,7 +951,7 @@
         <a href='group/链表/相交链表.md'>相交链表</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
