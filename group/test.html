@@ -14,39 +14,22 @@
         为此我们向右和向下移动，临时增加列索引和行索引，然后用标志标记该行列是否全都为 1；
         如果全都为 1，则继续检索行列，如果找到 0，便停止移动，更新最大正方形的边长。然后从最初发现 1 的元素旁边遍历矩阵，直到矩阵的所有元素都被遍历。
       */
-      var maximalSquare = function(matrix) {
-        const rows = matrix.length;
-        const cols = matrix[0] ? matrix[0].length : 0;
-        let max = 0;
-        for (let i = 0; i < rows; i++) {
-          for (let j = 0; j < cols; j++) {
-            if (matrix[i][j] === '0') continue;
-            let item = 1;
-            let flag = true;
-            while (i + item < rows && j + item < cols) {
-              for (let k = i; k <= i + item; k++) {
-                if (matrix[k][j + item] === '0') {
-                  flag = false;
-                }
-              }
-              for (let k = j; k <= j + item; k++) {
-                if (matrix[i + item][k] === '0') {
-                  flag = false;
-                }
-              }
-              if (flag) {
-                item++
-              } else {
-                break;
-              };
-            }
+      var maxSubArray = function(nums) {
+        let max = nums[0];
+        let item = max;
+        for (let i = 1; i < nums.length; i++) {
+          if (nums[i] > 0) {
+            item = item + nums[i];
             max = Math.max(item, max);
+          } else {
+            item = nums[ i ]
           }
+          
         }
-        return Math.pow(max, 2);
+        console
+        return max;
       };
-      const res = maximalSquare([["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]);
-      console.log(res);
+      maxSubArray([-2,1,-3,4,-1,2,1,-5,4]);
     </script>
   </body>
 </html>
