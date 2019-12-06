@@ -36,7 +36,7 @@ async function readFile(root) {
   let res = {};
   let original;
   const cachePath = path.join(template.base, template.cache);
-  // 检测是否有缓存文件
+  // 检测是否有缓存文件，有则读取
   try {
     fs.accessSync(cachePath);
     original = fs.readFileSync(cachePath, 'utf-8');
