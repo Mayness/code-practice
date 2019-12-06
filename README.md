@@ -10,7 +10,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
@@ -114,7 +114,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
@@ -173,7 +173,7 @@
         <a href='group/Array/回溯算法/最大子序和.md'>最大子序和</a>
       </td>
       <td style="text-align: center;">
-        <p>1</p>
+        <p>2</p>
       </td>
   </tr>
     
@@ -288,7 +288,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
@@ -382,7 +382,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
@@ -516,7 +516,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
@@ -542,7 +542,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
@@ -576,7 +576,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
@@ -690,7 +690,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
@@ -754,7 +754,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
@@ -818,7 +818,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
@@ -862,7 +862,7 @@
 <table style="margin-left: 10px;">
   <thead>
     <th>topic</th>
-    <th>update</th>
+    <th>review</th>
   </thead>
   <tbody>
     
