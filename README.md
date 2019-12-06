@@ -173,7 +173,7 @@
         <a href='group/Array/回溯算法/最大子序和.md'>最大子序和</a>
       </td>
       <td style="text-align: center;">
-        <p>2</p>
+        <p>3</p>
       </td>
   </tr>
     
