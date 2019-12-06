@@ -5,15 +5,16 @@ const ejs = require('ejs');
 
 const entry = './group';
 const template = {
-  file: './.template/index.ejs',
-  cache: './.template/cache.json'
+  base: '.template',
+  file: 'index.ejs',
+  cache: 'cache.json'
 };
 const output = './README.md';
 const resetUpdate = false;
 
 (async () => {
   const pathObj = await readFile(entry);
-  const view = await ejs.renderFile(template.file, {
+  const view = await ejs.renderFile(path.join(template.base, template.file), {
     data: pathObj
   });
   fs.writeFileSync(output, view);
@@ -33,7 +34,14 @@ const resetUpdate = false;
  */
 async function readFile(root) {
   let res = {};
-  const original = fs.readFileSync(template.cache, 'utf-8');
+  let original;
+  const cachePath = path.join(template.base, template.cache);
+  try {
+    fs.accessSync(cachePath);
+    original = fs.readFileSync(cachePath, 'utf-8');
+  } catch {
+    original = '{}';
+  }
   function recursionFile(res, root, origin = {}) {
     const data = fs.readdirSync(root);
     for (const item of data) {
@@ -57,8 +65,10 @@ async function readFile(root) {
       }
     }
   }
+  console.log(original);
   recursionFile(res, root, JSON.parse(original));
-  fs.writeFileSync(template.cache, JSON.stringify(res));
+  console.log(res);
+  fs.writeFileSync(cachePath, JSON.stringify(res));
   return res;
 }
 
