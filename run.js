@@ -36,6 +36,7 @@ async function readFile(root) {
   let res = {};
   let original;
   const cachePath = path.join(template.base, template.cache);
+  // 检测是否有缓存文件
   try {
     fs.accessSync(cachePath);
     original = fs.readFileSync(cachePath, 'utf-8');
@@ -65,9 +66,7 @@ async function readFile(root) {
       }
     }
   }
-  console.log(original);
   recursionFile(res, root, JSON.parse(original));
-  console.log(res);
   fs.writeFileSync(cachePath, JSON.stringify(res));
   return res;
 }
