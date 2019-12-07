@@ -847,7 +847,7 @@
         <a href='group/图/最大正方形.md'>最大正方形</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
