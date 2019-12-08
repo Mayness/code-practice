@@ -824,6 +824,16 @@
     	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/图/三角形最小路径和.md'>三角形最小路径和</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/图/岛屿数量.md'>岛屿数量</a>	
       </td>	
       <td style="text-align: center;">	
