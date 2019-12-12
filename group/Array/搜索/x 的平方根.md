@@ -33,7 +33,7 @@ var mySqrt = function(x) {
     let left = 1;
     let right = x;
     while(left + 1 < right) {
-      const mid = Math.floor((left + right)/2);
+      const mid = (left + right) >>> 1;
       if (Math.pow(mid, 2) > x) {
         right = mid;
       } else {
