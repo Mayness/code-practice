@@ -401,7 +401,7 @@
         <a href='group/Array/搜索/x 的平方根.md'>x 的平方根</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -431,7 +431,7 @@
         <a href='group/Array/搜索/在排序数组中查找元素的第一个和最后一个位置.md'>在排序数组中查找元素的第一个和最后一个位置</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
