@@ -89,7 +89,7 @@
         <a href='group/Array/动态规划/打家劫舍.md'>打家劫舍</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -143,7 +143,7 @@
         <a href='group/Array/回溯算法/全排序.md'>全排序</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -307,7 +307,7 @@
         <a href='group/Array/排序/前 K 个高频元素.md'>前 K 个高频元素</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -501,7 +501,7 @@
         <a href='group/Array/搜索/第一个错误版本.md'>第一个错误版本</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -535,7 +535,7 @@
         <a href='group/Array/贪心算法/跳跃游戏.md'>跳跃游戏</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
