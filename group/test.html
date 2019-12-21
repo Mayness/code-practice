@@ -35,18 +35,35 @@
         输出: 3
         ```
       */
-      var canJump = function(nums) {
-        let reach = 0;
-        for (let i = 0; i < nums.length; i++) {
-          if (reach < i || reach >= nums.length - 1) break;
-          if (nums[ i ] !== 0) {
-            reach = Math.max(reach, i + nums[ i ]);
+      var findCircleNum = function(M) {
+        let count = 0;
+        for (let i = 0; i < M.length; i++) {
+          for (let j = 0; j < M.length; j++) {
+            if (M[ i ][ j ] === 1) {
+              M[ i ][ j ] = 0;
+              M[ j ][ i ] = 0;
+              dps(j, M)
+              count++;
+            }
           }
-          
         }
-        return reach >= nums.length - 1;
+        return count;
       };
-      console.log(canJump([3,0,8,2,0,0,1]));
+
+      function dps(j, M) {
+        for (let k = 0; k < M.length; k++) {
+          if (j === k) {
+            M[j][k] = 0;
+            continue;
+          } else if (M[j][k] === 1) {
+            M[j][k] = 0;
+            M[k][j] = 0;
+            dps(k, M);
+          }
+        }
+      }
+
+      console.log(findCircleNum([[1,1,0],[1,1,0],[0,0,1]]));
     </script>
   </body>
 </html>
