@@ -847,7 +847,7 @@
         <a href='group/图/岛屿数量.md'>岛屿数量</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
