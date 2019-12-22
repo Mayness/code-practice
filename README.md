@@ -99,7 +99,7 @@
         <a href='group/Array/动态规划/爬楼梯.md'>爬楼梯</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
