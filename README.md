@@ -89,7 +89,7 @@
         <a href='group/Array/动态规划/打家劫舍.md'>打家劫舍</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -143,7 +143,7 @@
         <a href='group/Array/回溯算法/全排序.md'>全排序</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -163,7 +163,7 @@
         <a href='group/Array/回溯算法/子集.md'>子集</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -307,7 +307,7 @@
         <a href='group/Array/排序/前 K 个高频元素.md'>前 K 个高频元素</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -337,7 +337,7 @@
         <a href='group/Array/排序/字母异位词分组.md'>字母异位词分组</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -655,7 +655,7 @@
         <a href='group/Number/快乐数.md'>快乐数</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -803,7 +803,7 @@
         <a href='group/二叉树/填充每个节点的下一个右侧节点指针.md'>填充每个节点的下一个右侧节点指针</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -837,7 +837,7 @@
         <a href='group/图/三角形最小路径和.md'>三角形最小路径和</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -891,7 +891,7 @@
         <a href='group/链表/两数相加.md'>两数相加</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
