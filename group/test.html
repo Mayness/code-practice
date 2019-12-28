@@ -9,8 +9,39 @@
   <body>
     <script>
       /*
+        给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。
+
+      示例:
+
+      ```
+      输入: ["eat", "tea", "tan", "ate", "nat", "bat"],
+      输出:
+      [
+        ["ate","eat","tea"],
+        ["nat","tan"],
+        ["bat"]
+      ]
+      ```
       */
-      
+      var groupAnagrams = function(strs) {
+        const res = {};
+        const keys = [];
+        for (let i = 0; i < strs.length; i++) {
+          const item = strs[ i ];
+          const array = new Uint8Array(26);
+          for (let j = 0; j < item.length; j++) {
+            array[ item.charCodeAt(j) - 97 ] += 1;
+          }
+          const key = array.join('');
+          if (res[ key ]) {
+            res[ key ].push(item);
+          } else {
+            res[ key ] = [ item ];
+          }
+        }
+        return Object.values(res);
+      }
+      console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
     </script>
   </body>
 </html>
