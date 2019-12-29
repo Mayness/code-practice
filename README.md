@@ -153,7 +153,7 @@
         <a href='group/Array/回溯算法/单词搜索.md'>单词搜索</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
