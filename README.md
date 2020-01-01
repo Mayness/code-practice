@@ -357,7 +357,7 @@
         <a href='group/Array/排序/移动0.md'>移动0</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
