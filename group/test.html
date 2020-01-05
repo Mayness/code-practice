@@ -9,13 +9,33 @@
   <body>
     <script>
       var trap = function(height) {
-        let left = 0;
-        let right = height.length - 1;
-        while(left <= right) {
-          
+        if (height.length <= 2) return 0;
+        let maxLeftArr = [];
+        let maxRightArr = [];
+        let maxLeft = 0;
+        let maxRight = 0;
+        let res = 0;
+        for (let i = 0; i < height.length; i++) {
+          let flag = false;
+          maxLeftArr[ i ] = maxLeft = Math.max(maxLeft, height[ i ]);
+          maxRightArr[ height.length - i - 1 ] = maxRight = Math.max(maxRight, height[ height.length - i - 1 ]);
+          if (maxLeftArr[ i ] && maxRightArr[ i ]) {
+            flag = true;
+            const diff = Math.min(maxLeftArr[ i ], maxRightArr[ i ]);
+            if (diff > height[ i ]) {
+              res += (diff - height[ i ])
+            }
+          }
+          if (maxLeftArr[ height.length - 1 - i ] && maxRightArr[ height.length - 1 - i ] && !flag) {
+            const diff = Math.min(maxLeftArr[ height.length - 1 - i ], maxRightArr[ height.length - 1 - i ]);
+            if (diff > height[ height.length - 1 - i ]) {
+              res += (diff - height[ height.length - 1 - i ])
+            }
+          }
         }
+        return res;
       };
-      trap([0,1,0,2,1,0,1,3,2,1,2,1]);
+      trap([2,0,2])
     </script>
   </body>
 </html>
