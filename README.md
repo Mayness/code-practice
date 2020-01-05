@@ -173,7 +173,7 @@
         <a href='group/Array/回溯算法/接雨水.md'>接雨水</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
