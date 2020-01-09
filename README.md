@@ -498,6 +498,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/搜索/有效的数独.md'>有效的数独</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/搜索/第一个错误版本.md'>第一个错误版本</a>	
       </td>	
       <td style="text-align: center;">	
@@ -507,16 +517,6 @@
     	
   	
 	
-  	
-  <tr>	
-    <td style="width: 300px;">	
-        <a href='group/Array/有效的数独.md'>有效的数独</a>	
-      </td>	
-      <td style="text-align: center;">	
-        <p>0</p>	
-      </td>	
-  </tr>	
-    	
   	
   </tbody>	
 </table>	
