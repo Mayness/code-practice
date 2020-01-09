@@ -8,34 +8,53 @@
   </head>
   <body>
     <script>
-      var trap = function(height) {
-        if (height.length <= 2) return 0;
-        let maxLeftArr = [];
-        let maxRightArr = [];
-        let maxLeft = 0;
-        let maxRight = 0;
-        let res = 0;
-        for (let i = 0; i < height.length; i++) {
-          let flag = false;
-          maxLeftArr[ i ] = maxLeft = Math.max(maxLeft, height[ i ]);
-          maxRightArr[ height.length - i - 1 ] = maxRight = Math.max(maxRight, height[ height.length - i - 1 ]);
-          if (maxLeftArr[ i ] && maxRightArr[ i ]) {
-            flag = true;
-            const diff = Math.min(maxLeftArr[ i ], maxRightArr[ i ]);
-            if (diff > height[ i ]) {
-              res += (diff - height[ i ])
-            }
-          }
-          if (maxLeftArr[ height.length - 1 - i ] && maxRightArr[ height.length - 1 - i ] && !flag) {
-            const diff = Math.min(maxLeftArr[ height.length - 1 - i ], maxRightArr[ height.length - 1 - i ]);
-            if (diff > height[ height.length - 1 - i ]) {
-              res += (diff - height[ height.length - 1 - i ])
-            }
-          }
+      /*
+        在未排序的数组中找到第 k 个最大的元素。请注意，
+        你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
+
+        示例 1:
+
+        输入: [3,2,1,5,6,4] 和 k = 2
+        输出: 5
+        示例 2:
+
+        输入: [3,2,3,1,2,4,5,5,6] 和 k = 4
+        输出: 4
+        说明:
+
+        你可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。
+      */
+      var findKthLargest = function(nums, k) {
+        const arr = [];
+        let min = Number.MIN_SAFE_INTEGER;
+        for (let i = 0; i < nums.length; i++) {
+          if (arr.length >= k && min > nums[ i ]) continue;
+          min = sortAndFindLast(nums[ i ]);
         }
-        return res;
-      };
-      trap([2,0,2])
+        function sortAndFindLast(value) {
+          let left =  0;
+          let right =  arr.length - 1;
+          while(left <= right) {
+            const mid = (left + right) >>> 1;
+            const item = arr[ mid ];
+            if (item > value) {
+              right = mid - 1;
+            } else if (item < value) {
+              left = mid + 1;
+            } else {
+              left = mid;
+              break;
+            }
+          }
+          arr.splice(left, 0, value);
+          if (arr.length > k) {
+            arr.shift();
+          }
+          return arr[ 0 ];
+        }
+        return min;
+      }
+      console.log(findKthLargest([3,2,3,1,2,4,5,5,6], 4));
     </script>
   </body>
 </html>
