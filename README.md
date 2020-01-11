@@ -501,7 +501,7 @@
         <a href='group/Array/搜索/有效的数独.md'>有效的数独</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
