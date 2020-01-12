@@ -595,7 +595,7 @@
         <a href='group/Number/3的幂.md'>3的幂</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
