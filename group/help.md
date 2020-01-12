@@ -43,3 +43,19 @@ function Iterator(k) {
   return array;
 }
 ```
+
+### hyphenate a camelCase string.
+```javascript
+var hyphenateRE = /\B([A-Z])/g;
+const hyphenate = cached((str) => {
+  return str.replace(hyphenateRE, '-$1').toLowerCase()
+})
+```
+
+### get repeat string
+```javascript
+function getReapeat(string) {
+  // 匹配重复出现的字符 （.）是任意字符,如果只匹配重复的数字则可以换成\d  (?=.*\1) 是断言 表示任意字符与第一个捕获的内容至少出现了两次
+  return string.match(/(.)(?=.*\1)/g);
+}
+```
