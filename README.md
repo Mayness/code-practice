@@ -709,7 +709,7 @@
         <a href='group/String/串联所有单词的子串.md'>串联所有单词的子串</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -744,6 +744,16 @@
   </tr>	
     	
   	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/String/验证pin码.md'>验证pin码</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
 	
   	
   <tr>	
@@ -751,7 +761,7 @@
         <a href='group/help.md'>help</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
