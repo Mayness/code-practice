@@ -16,8 +16,8 @@
 
 进阶：
 
-你能尝试使用一趟扫描实现吗？
-
+你能尝试使用一趟扫描实现吗？  
+From：[删除链表的倒数第 N 个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/submissions/)
 ## 解法 1：存储节点
 
 ### 分析
@@ -48,32 +48,40 @@ var removeNthFromEnd = function(head, n) {
 ```
 
 ### 复杂度
+
 时间复杂度：O(n)  
-空间复杂度：O(n),每一个元素存储的节点长度是((1 + n) \* n)/2  
+空间复杂度：O(n),每一个元素存储的节点长度是((1 + n) \* n)/2
 
 ## 方法 2：双指针
+
 ### 分析
-使用两个指针，首先指针1先走n+1位，然后指针1和指针2同时走，当指针1到达尾部的时候，指针2的位置正好在倒数n+1的位置。即可跳过倒数第n个节点  
+
+使用两个指针，首先指针 1 先走 n+1 位，然后指针 1 和指针 2 同时走，当指针 1 到达尾部的时候，指针 2 的位置正好在倒数 n+1 的位置。即可跳过倒数第 n 个节点  
 second.next = second.next.next;  
 <img src="../../static/删除链表的倒数第N个节点.gif"/>
 
 ### 解答
+
 ```javascript
 var removeNthFromEnd = function(head, n) {
-  const init = new ListNode(null);
-  init.next = head;
-  let first = init;
-  let second = init;
-  for (let i = 0; i < n; i++) {
-    first = first.next;
+  const beforeNode = new ListNode();
+  beforeNode.next = head;
+  let slow = beforeNode;
+  let fast = beforeNode;
+  let fastStep = 0;
+  while (fast.next) {
+    // 当步数大于等于n的时候，slow开始走
+    if (fastStep >= n) {
+      slow = slow.next;
+    }
+    fast = fast.next;
+    fastStep++;
   }
-  while (first = first.next) {
-    second = second.next;
-  }
-  second.next = second.next.next;
-  return init.next;
+  slow.next = slow.next ? slow.next.next : null;
 };
 ```
+
 ### 复杂度
+
 时间复杂度：O(n)  
-空间复杂度：O(1)  
+空间复杂度：O(1)

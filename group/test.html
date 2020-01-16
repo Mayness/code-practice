@@ -9,63 +9,59 @@
   <body>
     <script>
       /*
-        ## 串联所有单词的子串
+        给定一个链表，删除链表的倒数第  n  个节点，并且返回链表的头结点。
 
-        给定一个字符串  s  和一些长度相同的单词  words。找出 s 中恰好可以由  words 中所有单词串联形成的子串的起始位置。
-
-        注意子串要与  words 中的单词完全匹配，中间不能有其他字符，但不需要考虑  words  中单词串联的顺序。
-
-        示例 1：
-
+        示例：
+2 3
         ```
-        输入：
-          s = "barfoothefoobarman",
-          words = ["foo","bar"]
-        输出：[0,9]
-        解释：
-        从索引 0 和 9 开始的子串分别是 "barfoor" 和 "foobar" 。
-        输出的顺序不重要, [9,0] 也是有效答案。
+        给定一个链表: 1->2->3->4->5, 和 n = 2.
+
+        当删除了倒数第二个节点后，链表变为 1->2->3->5.
         ```
 
-        示例 2：
+        说明：
 
-        ```
-        输入：
-          s = "wordgoodgoodgoodbestword",
-          words = ["word","good","best","word"]
-        输出：[]
-        ```
+        给定的 n  保证是有效的。
+
+        进阶：
+
+        你能尝试使用一趟扫描实现吗？
+
+         * Definition for singly-linked list.
+         * function ListNode(val) {
+         *     this.val = val;
+         *     this.next = null;
+         * }
       */
-      var findSubstring = function(s, words) {
-        if (!s.length || !words.length) return [];
-        const res = [];
-        const map = {};
-        for (let i = 0; i < words.length; i++) {
-          map[words[i]] = map[words[i]] + 1 || 1;
+      function ListNode(val) {
+        this.val = val;
+        this.next = null;
+      }
+      function generateNode(array) {
+        const res = new ListNode();
+        let curr = res;
+        for (let item of array) {
+          curr.next = new ListNode(item);
+          curr = curr.next;
         }
-        const gap = words[0].length;
-        const len = s.length - gap * words.length;
-        let i = 0;
-        while (i <= len) {
-          const mapItem = Object.assign({}, map);
-          let flag = true;
-          for (let j = 0; j < words.length; j++) {
-            const str = s.slice(i + j * gap, i + (j + 1) * gap);
-            if (mapItem[str] && mapItem[str] > 0) {
-              mapItem[str]--;
-            } else {
-              flag = false;
-              break;
-            }
+        return res.next;
+      }
+      var removeNthFromEnd = function(head, n) {
+        const beforeNode = new ListNode();
+        beforeNode.next = head;
+        let slow = beforeNode;
+        let fast = beforeNode;
+        let fastStep = 0;
+        while (fast.next) {
+          if (fastStep >= n) {
+            slow = slow.next;
           }
-          if (flag && Object.values(mapItem).every(item => item === 0)) {
-            res.push(i);
-          }
-          i++;
+          fast = fast.next;
+          fastStep++;
         }
-        return res;
+        slow.next = slow.next ? slow.next.next : null;
       };
-      console.log(findSubstring('wordgoodgoodgoodbestword', ['word', 'good', 'best', 'good']));
+      removeNthFromEnd(generateNode([1,2,3,4]), 2);
     </script>
   </body>
 </html>
