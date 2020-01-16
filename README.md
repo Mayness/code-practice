@@ -783,7 +783,7 @@
         <a href='group/二叉树/二叉树的最大深度.md'>二叉树的最大深度</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -857,7 +857,7 @@
         <a href='group/图/岛屿数量.md'>岛屿数量</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -911,7 +911,7 @@
         <a href='group/链表/删除链表的倒数第N个节点.md'>删除链表的倒数第N个节点</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
