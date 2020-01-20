@@ -133,7 +133,7 @@
         <a href='group/Array/回溯算法/两数相除.md'>两数相除</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -203,7 +203,7 @@
         <a href='group/Array/回溯算法/最长连续递增序列.md'>最长连续递增序列</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
