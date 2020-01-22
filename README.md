@@ -327,7 +327,7 @@
         <a href='group/Array/排序/字典序排数.md'>字典序排数</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -411,7 +411,7 @@
         <a href='group/Array/搜索/三数之和.md'>三数之和</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
