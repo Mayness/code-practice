@@ -1,6 +1,6 @@
-## Excel表列序号
+## Excel 表列序号
 
-给定一个Excel表格中的列名称，返回其相应的列序号。
+给定一个 Excel 表格中的列名称，返回其相应的列序号。
 
 例如，
 
@@ -10,8 +10,9 @@
     ...
     Z -> 26
     AA -> 27
-    AB -> 28 
+    AB -> 28
     ...
+
 示例 1:
 
 输入: "A"
@@ -23,20 +24,21 @@
 示例 3:
 
 输入: "ZY"
-输出: 701
+输出: 701  
 
+From:[Excel表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number/submissions/)
 ## 分析
-相当于一个对将26进制的数转化为10进制
+
+相当于一个对将 26 进制的数转化为 10 进制
 
 ## 解答
+
 ```javascript
 var titleToNumber = function(s) {
-  let i = 0;
-  let sum = 0;
-  while(i < s.length) {
-    sum += Math.pow(26, i)*(s[ s.length - 1 - i ].charCodeAt() - 64)
-    i++
+  let res = 0;
+  for (let i = s.length - 1; i >= 0; i--) {
+    res += (s.charCodeAt(i) - 64) * Math.pow(26, s.length - 1 - i);
   }
-  return sum;
+  return res;
 };
 ```
