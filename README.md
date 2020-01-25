@@ -421,7 +421,7 @@
         <a href='group/Array/搜索/只出现一次的数字.md'>只出现一次的数字</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -605,7 +605,7 @@
         <a href='group/Number/Excel表列序号.md'>Excel表列序号</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
