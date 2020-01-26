@@ -605,7 +605,7 @@
         <a href='group/Number/Excel表列序号.md'>Excel表列序号</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -719,7 +719,7 @@
         <a href='group/String/字符串相乘.md'>字符串相乘</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
