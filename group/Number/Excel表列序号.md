@@ -26,7 +26,7 @@
 输入: "ZY"
 输出: 701  
 
-From:[Excel表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number/submissions/)
+From: [Excel表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number/submissions/)
 ## 分析
 
 相当于一个对将 26 进制的数转化为 10 进制
