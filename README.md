@@ -823,7 +823,7 @@
         <a href='group/二叉树/将有序数组转换为二叉搜索树.md'>将有序数组转换为二叉搜索树</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -921,7 +921,7 @@
         <a href='group/链表/反转链表.md'>反转链表</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
