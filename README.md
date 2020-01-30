@@ -79,7 +79,7 @@
         <a href='group/Array/动态规划/俄罗斯套娃信封问题.md'>俄罗斯套娃信封问题</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -193,7 +193,7 @@
         <a href='group/Array/回溯算法/最长连续序列.md'>最长连续序列</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
