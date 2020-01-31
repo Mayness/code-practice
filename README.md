@@ -347,7 +347,7 @@
         <a href='group/Array/排序/旋转图像.md'>旋转图像</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
