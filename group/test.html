@@ -68,34 +68,26 @@
       max-i x -> x i
     */
     
-    var rotate = function(matrix) {
-      let start = 0;
-      let end = matrix.length - 1;
-      while(start < end) {
-        for (let i = 0; i < end - start; i++) {
-          [ 
-            matrix[ end - i ][ start ],
-            matrix[ end ][ end - i ],
-            matrix[ start + i ][ end ],
-            matrix[ start ][ start + i ]
-          ] = [ 
-            matrix[ end ][ end - i ],
-            matrix[ start + i ][ end ],
-            matrix[ start ][ start + i ],
-            matrix[ end - i ][ start ],
-          ]
+    var isValid = function(s) {
+      if (!s.length) return true;
+      if (!s.length % 2) return false;
+      const start = [ '(', '{', '[' ];
+      const end = [ ')', '}', ']' ];
+      const list = [];
+      for (let i = 0; i < s.length; i++) {
+        console.log(list);
+        if (start.indexOf(s[ i ]) !== -1) {
+          list.push(s[ i ]);
+          continue;
         }
-        start++;
-        end--;
+        if (!list.length) return false;
+        const value = list.pop();
+        const index = start.indexOf(value);
+        if (end[ index ] !== s[ i ]) return false;
       }
-      return matrix;
-    }
-    console.log(rotate([
-        [ 5, 1, 9,11],
-        [ 2, 4, 8,10],
-        [13, 3, 6, 7],
-        [15,14,12,16]
-      ]))
+      return true;
+    };
+    console.log(isValid('('))
     </script>
   </body>
 </html>
