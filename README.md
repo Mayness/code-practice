@@ -625,7 +625,7 @@
         <a href='group/Number/Pow(x, n).md'>Pow(x, n)</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -739,7 +739,7 @@
         <a href='group/String/有效字母的异位词.md'>有效字母的异位词</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -793,7 +793,7 @@
         <a href='group/二叉树/二叉树的最大深度.md'>二叉树的最大深度</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
