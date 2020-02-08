@@ -109,7 +109,7 @@
         <a href='group/Array/动态规划/零钱兑换✏️.md'>零钱兑换✏️</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -377,7 +377,7 @@
         <a href='group/Array/排序/颜色分类✏️.md'>颜色分类✏️</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -857,7 +857,7 @@
         <a href='group/图/三角形最小路径和.md'>三角形最小路径和</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -951,7 +951,7 @@
         <a href='group/链表/合并两个有序链表.md'>合并两个有序链表</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
