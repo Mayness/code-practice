@@ -223,7 +223,7 @@
         <a href='group/Array/回溯算法/生成括号.md'>生成括号</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -367,7 +367,7 @@
         <a href='group/Array/排序/第k个排列.md'>第k个排列</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -441,7 +441,7 @@
         <a href='group/Array/搜索/复原IP地址.md'>复原IP地址</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
