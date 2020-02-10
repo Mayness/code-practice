@@ -9,49 +9,47 @@
   <body>
     <script>
       /*
-      给定不同面额的硬币 coins 和一个总金额 amount。
-      编写一个函数来计算可以凑成总金额所需的最少的硬币个数。
-      如果没有任何一种硬币组合能组成总金额，返回 -1。
-
-      示例 1:
+      给定一个只包含数字的字符串，复原它并返回所有可能的 IP 地址格式。
+      示例:
 
       ```
-      输入: coins = [1, 2, 5], amount = 11
-      输出: 3
-      解释: 11 = 5 + 5 + 1
+      输入: "25525511135"
+      输出: ["255.255.11.135", "255.255.111.35"]
       ```
 
-      示例 2:
-
-      ```
-      输入: coins = [2], amount = 3
-      输出: -1
-      ```
-
-      说明:
-      你可以认为每种硬币的数量是无限的。
+      每个以逗号分隔的格式为 0-9、10-99、100-199、200-255  
       */
-    var coinChange = function(coins, amount) {
-      if (amount === 0) return 0;
-      if (coins.includes(amount)) return 1;
-      const dp = [ 0 ];
-      for (let i = 1; i <= amount; i++) {
-        const ways = [];
-        for (let j = 0; j < coins.length; j++) {
-          const index = i - coins[ j ];
-          if (index >= 0 && dp[ index ] !== -1) {
-            ways.push(dp[ index ]);
+      var restoreIpAddresses = function(s) {
+        if (!s.length) return [];
+        const res = [];
+        (function isMatch(str, array) {
+          if (str === '') res.push(array.join('.'));
+          const num = 3 - array.length;
+          let currReg = [];
+          const len = str.length;
+          if (len <= (num + 1) * 3 && len >= num + 3) {
+            currReg.push(/^1\d{2}/, /^2[0-4]\d/, /^25[0-5]/);
           }
-        }
-        if (ways.length) {
-          dp[ i ] = Math.min(...ways) + 1;
-        } else {
-          dp[ i ] = -1;
-        }
-      }
-      return dp;
-    }
-    console.log(coinChange([1,2,5],11));
+          if (len <= num * 3 + 2 && len >= num + 2) {
+            currReg.push(/^[1-9]\d/);
+          }
+          if (len <= num * 3 + 1 && len >= num + 1) {
+            currReg.push(/^\d/);
+          }
+          for (let i = 0; i < currReg.length; i++) {
+            const matchStr = str.match(currReg[i]);
+            if (matchStr) {
+              const currArray = array.slice(0);
+              currArray.push(matchStr[0]);
+              isMatch(str.replace(currReg[i], ''), currArray);
+            } else {
+              continue;
+            }
+          }
+        })(s, []);
+        return res;
+      };
+      restoreIpAddresses('25525511135');
     </script>
   </body>
 </html>

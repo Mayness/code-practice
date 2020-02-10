@@ -33,6 +33,7 @@
 输出: "2314"
 ```
 
+From: [第k个排列](https://leetcode-cn.com/problems/permutation-sequence/submissions/)
 ## 解法 1：暴力循环
 
 ### 分析
@@ -95,30 +96,26 @@ var getPermutation = function(n, k) {
 ```javascript
 var getPermutation = function(n, k) {
   // 得到每一种排列个数组合
-  let types = [1];
+  const types = [ 1 ];
   for (let i = 1; i < n; i++) {
-    types[i] = (i + 1) * types[i - 1];
+    types[ i ] = types[ i - 1 ] * (i + 1)
   }
   // 提取n中可取数，若n=3，即[1,2,3]
   const array = new Array(n).fill('').map((_, index) => index + 1);
-  let str = '';
-  while (array.length - 1) {
+  let res = '';
+  while(array.length) {
     // 取出上一位一共有多少种排列
     const divisor = types[array.length - 2];
-    // 得到余数
-    const remain = k % divisor;
+    let remain = k % (divisor);
+    const consult = k / divisor;
     // 这里需要注意，若余数为0，则实际取到的index需要减一，从例子就可以看出，该数是属于这个界点的最大值.
-    const consult = remain === 0 ? Math.floor(k / divisor) - 1 : Math.floor(k / divisor);
-    // 提取继续需要计算的k
-    k = remain;
+    const index = remain === 0 ? consult - 1 : Math.floor(consult);
     // 当前的结果字符串
-    str += array.splice(consult, 1);
+    res += array.splice(index, 1)[ 0 ];
     // 既然属于界点的最大值，后续可以不用再计算
-    if (remain === 0) {
-      return str + array.sort((a, b) => b - a).join('');
-    }
+    if (remain === 0) return res + array.reverse().join('');
+    k = remain;
   }
-  // 还剩下数组的最后一位则直接拼接
-  return str + array[0];
-};
+  return res;
+}
 ```

@@ -8,11 +8,12 @@
 输入: "25525511135"
 输出: ["255.255.11.135", "255.255.111.35"]
 ```
-
+From: [复原IP地址](https://leetcode-cn.com/problems/restore-ip-addresses/submissions/)
 ## 分析
 ip地址的格式为 a.b.c.d   
 每个以逗号分隔的格式为 0-9、10-99、100-199、200-255  
 可以通过正则匹配出对应的字符串，然后再将余下的字符串再进行函数过滤。这里可以用递归    
+
 ## 解答
 
 ```javascript
@@ -41,6 +42,42 @@ var restoreIpAddresses = function(s) {
       }
     }
   })(s);
+  return res;
+};
+
+// 写法2，限制匹配的正则数量
+var restoreIpAddresses = function(s) {
+  if (!s.length) return [];
+  const res = [];
+  (function isMatch(str, array) {
+    if (str === '') res.push(array.join('.'));
+    const num = 3 - array.length;
+    let currReg = [];
+    const len = str.length;
+    // 若当前匹配三位数的IP【100-199、200-255】，则需要保证  (剩余位 * 最大数IP 3位 + 3) >= len >= (剩余位 * 最小数IP 1位 + 3)
+    if (len <= (num + 1) * 3 && len >= num + 3) {
+      currReg.push(/^1\d{2}/, /^2[0-4]\d/, /^25[0-5]/);
+    }
+    // 匹配两位【10-99】，与以上同理，只不过又最后的3替换为2
+    if (len <= num * 3 + 2 && len >= num + 2) {
+      currReg.push(/^[1-9]\d/);
+    }
+    // 匹配1位【1-9】，3替换为1
+    if (len <= num * 3 + 1 && len >= num + 1) {
+      currReg.push(/^\d/);
+    }
+    // 最后currReg即为需要匹配的字符串数组
+    for (let i = 0; i < currReg.length; i++) {
+      const matchStr = str.match(currReg[i]);
+      if (matchStr) {
+        const copyArray = array.slice(0);
+        copyArray.push(matchStr[0]);
+        isMatch(str.replace(currReg[i], ''), copyArray);
+      } else {
+        continue;
+      }
+    }
+  })(s, []);
   return res;
 };
 ```
