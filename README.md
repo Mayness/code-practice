@@ -581,7 +581,7 @@
         <a href='group/Function/无限柯里化.md'>无限柯里化</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -635,7 +635,7 @@
         <a href='group/Number/两整数之和✏️.md'>两整数之和✏️</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -749,7 +749,7 @@
         <a href='group/String/简化路径.md'>简化路径</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
