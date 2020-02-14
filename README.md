@@ -545,7 +545,7 @@
         <a href='group/Array/贪心算法/跳跃游戏.md'>跳跃游戏</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
