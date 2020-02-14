@@ -9,39 +9,76 @@
   <body>
     <script>
       /*
-      给定一个非负整数数组，你最初位于数组的第一个位置。
-      数组中的每个元素代表你在该位置可以跳跃的最大长度。
+        以 Unix 风格给出一个文件的绝对路径，你需要简化它。
+        或者换句话说，将其转换为规范路径。
 
-      判断你是否能够到达最后一个位置。
+        在 Unix 风格的文件系统中，一个点（.）表示当前目录本身；
+        此外，两个点 （..） 表示将目录切换到上一级（指向父目录）；
+        两者都可以是复杂相对路径的组成部分。
+        更多信息请参阅：Linux / Unix 中的绝对路径 vs 相对路径
 
-      示例 1:
+        请注意，返回的规范路径必须始终以斜杠 / 开头，并且两个目录名之间必须只有一个斜杠 /。最后一个目录名（如果存在）不能以 / 结尾。此外，规范路径必须是表示绝对路径的最短字符串。
 
-      ```
-      输入: [2,3,1,1,4]
-      输出: true
-      解释: 从位置 0 到 1 跳 1 步, 然后跳 3 步到达最后一个位置。
-      ```
+        示例 1：
 
-      示例 2:
+        ```
+        输入："/home/"
+        输出："/home"
+        解释：注意，最后一个目录名后面没有斜杠。
+        ```
 
-      ```
-      输入: [3,2,1,0,4]
-      输出: false
-      解释: 无论怎样，你总会到达索引为 3 的位置。但该位置的最大跳跃长度是 0 ， 所以你永远不可能到达最后一个位置。
-      ```
+        示例 2：
+
+        ```
+        输入："/../"
+        输出："/"
+        解释：从根目录向上一级是不可行的，因为根是你可以到达的最高级。
+        ```
+
+        示例 3：
+
+        ```
+        输入："/home//foo/"
+        输出："/home/foo"
+        解释：在规范路径中，多个连续斜杠需要用一个斜杠替换。
+        ```
+
+        示例 4：
+
+        ```
+        输入："/a/./b/../../c/"
+        输出："/c"
+        ```
+
+        示例 5：
+
+        ```
+        输入："/a/../../b/../c//.//"
+        输出："/c"
+        ```
+
+        示例 6：
+
+        ```
+        输入："/a//b////c/d//././/.."
+        输出："/a/b/c"
+        ```
       */
-
-      var canJump = function(nums) {
-        let max = 0;
-        const len = nums.length;
-        for (let i = 0; i < len; i++) {
-          // 注意：这里max 不能加等号，因为若nums[ i ] === 1，这个条件是成立，因此不可取
-          if (max < i || max >= len - 1) break;
-          max = Math.max(i + nums[ i ], max);
+      var simplifyPath = function(path) {
+        const newPathArray = path.replace(/\/+/g, '/').split('/');
+        const resArray = [];
+        for (let i = 1; i < newPathArray.length; i++) {
+          const item = newPathArray[ i ];
+          if (item === '.') continue;
+          if (item === '..') {
+            if (resArray.length > 0) resArray.pop();
+            continue;
+          };
+          if (item !== '') resArray.push(item);
         }
-        return max >= len - 1;
+        return '/' + resArray.join('/');
       }
-      console.log(canJump([0]));
+      console.log(simplifyPath('/a//b////c/d//././/..'));
     </script>
   </body>
 </html>
