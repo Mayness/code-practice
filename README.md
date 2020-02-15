@@ -304,6 +304,16 @@
     	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/排序/下一个排列.md'>下一个排列</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/排序/前 K 个高频元素.md'>前 K 个高频元素</a>	
       </td>	
       <td style="text-align: center;">	
@@ -771,7 +781,7 @@
         <a href='group/help.md'>help</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>2</p>	
+        <p>3</p>	
       </td>	
   </tr>	
     	
@@ -790,6 +800,16 @@
     	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/二叉树/不同的二叉搜索树.md'>不同的二叉搜索树</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/二叉树/二叉树的最大深度.md'>二叉树的最大深度</a>	
       </td>	
       <td style="text-align: center;">	
@@ -803,7 +823,7 @@
         <a href='group/二叉树/二叉树的最近公共祖先.md'>二叉树的最近公共祖先</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
