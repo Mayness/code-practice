@@ -6,79 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
   </head>
+  <style>
+    div {
+      background-color: red;
+      border: 10px #000;
+    }
+  </style>
   <body>
     <script>
       /*
-        以 Unix 风格给出一个文件的绝对路径，你需要简化它。
-        或者换句话说，将其转换为规范路径。
+        给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
 
-        在 Unix 风格的文件系统中，一个点（.）表示当前目录本身；
-        此外，两个点 （..） 表示将目录切换到上一级（指向父目录）；
-        两者都可以是复杂相对路径的组成部分。
-        更多信息请参阅：Linux / Unix 中的绝对路径 vs 相对路径
+      百度百科中最近公共祖先的定义为：
+      “对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，
+      满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
 
-        请注意，返回的规范路径必须始终以斜杠 / 开头，并且两个目录名之间必须只有一个斜杠 /。最后一个目录名（如果存在）不能以 / 结尾。此外，规范路径必须是表示绝对路径的最短字符串。
+      例如，给定如下二叉树: root = [3,5,1,6,2,0,8,null,null,7,4]
 
-        示例 1：
+      <img src="../../static/236.png"/>
 
-        ```
-        输入："/home/"
-        输出："/home"
-        解释：注意，最后一个目录名后面没有斜杠。
-        ```
+      示例 1:
+      ```
+      输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+      输出: 3
+      解释: 节点 5 和节点 1 的最近公共祖先是节点 3。
+      ```
+      示例 2:
+      ```
+      输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+      输出: 5
+      解释: 节点 5 和节点 4 的最近公共祖先是节点 5。因为根据定义最近公共祖先节点可以为节点本身。
+      ```
+      说明:
 
-        示例 2：
-
-        ```
-        输入："/../"
-        输出："/"
-        解释：从根目录向上一级是不可行的，因为根是你可以到达的最高级。
-        ```
-
-        示例 3：
-
-        ```
-        输入："/home//foo/"
-        输出："/home/foo"
-        解释：在规范路径中，多个连续斜杠需要用一个斜杠替换。
-        ```
-
-        示例 4：
-
-        ```
-        输入："/a/./b/../../c/"
-        输出："/c"
-        ```
-
-        示例 5：
-
-        ```
-        输入："/a/../../b/../c//.//"
-        输出："/c"
-        ```
-
-        示例 6：
-
-        ```
-        输入："/a//b////c/d//././/.."
-        输出："/a/b/c"
-        ```
+      所有节点的值都是唯一的。
+      p、q 为不同节点且均存在于给定的二叉树中。
       */
-      var simplifyPath = function(path) {
-        const newPathArray = path.replace(/\/+/g, '/').split('/');
-        const resArray = [];
-        for (let i = 1; i < newPathArray.length; i++) {
-          const item = newPathArray[ i ];
-          if (item === '.') continue;
-          if (item === '..') {
-            if (resArray.length > 0) resArray.pop();
-            continue;
-          };
-          if (item !== '') resArray.push(item);
+      var numTrees = function(n) {
+        const dp = new Array(n + 1).fill(0);
+        dp[ 0 ] = 1;
+        dp[ 1 ] = 1;
+        for (let i = 2; i <= n; i++) {
+          for (let j = 0; j <= i - 1; j++) {
+            dp[ i ] += dp[ j ] * dp[ i - 1 - j ];
+          }
         }
-        return '/' + resArray.join('/');
-      }
-      console.log(simplifyPath('/a//b////c/d//././/..'));
+        return dp[ dp.length - 1 ];
+      };
+      console.log(numTrees(3));
+      // dp[ 2 ] = dp[ 0 ] * dp[ 1 ] + dp
     </script>
   </body>
 </html>
