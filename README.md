@@ -803,7 +803,7 @@
         <a href='group/二叉树/不同的二叉搜索树.md'>不同的二叉搜索树</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
