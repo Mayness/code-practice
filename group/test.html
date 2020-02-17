@@ -15,64 +15,61 @@
   <body>
     <script>
       /*
-        给定一个包含了一些 0 和 1 的非空二维数组 grid , 
-        一个 岛屿 是由四个方向 (水平或垂直) 的 1 (代表土地) 构成的组合。你可以假设二维矩阵的四个边缘都被水包围着。
+      给定一个链表，旋转链表，
+      将链表每个节点向右移动 k 个位置，其中 k 是非负数。
 
-      找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为 0。)
+        示例 1:
 
-      示例 1:
+        输入: 1->2->3->4->5->NULL, k = 2
+        输出: 4->5->1->2->3->NULL
+        解释:
+        向右旋转 1 步: 5->1->2->3->4->NULL
+        向右旋转 2 步: 4->5->1->2->3->NULL
+        示例 2:
 
-      ```
-      [
-        [0,0,1,0,0,0,0,1,0,0,0,0,0],
-        [0,0,0,0,0,0,0,1,1,1,0,0,0],
-        [0,1,1,0,1,0,0,0,0,0,0,0,0],
-        [0,1,0,0,1,1,0,0,1,0,1,0,0],
-        [0,1,0,0,1,1,0,0,1,1,1,0,0],
-        [0,0,0,0,0,0,0,0,0,0,1,0,0],
-        [0,0,0,0,0,0,0,1,1,1,0,0,0],
-        [0,0,0,0,0,0,0,1,1,0,0,0,0]
-      ]
-      ```
-
-      对于上面这个给定矩阵应返回 6。注意答案不应该是 11，因为岛屿只能包含水平或垂直的四个方向的‘1’。
-
-      示例 2:
-
-      ```
-      [
-        [0,0,0,0,0,0,0,0]
-      ]
-      ```
-
-      对于上面这个给定的矩阵, 返回 0。
-
-      注意: 给定的矩阵 grid 的长度和宽度都不超过 50。  
+        输入: 0->1->2->NULL, k = 4
+        输出: 2->0->1->NULL
+        解释:
+        向右旋转 1 步: 2->0->1->NULL
+        向右旋转 2 步: 1->2->0->NULL
+        向右旋转 3 步: 0->1->2->NULL
+        向右旋转 4 步: 2->0->1->NULL
       */
-      var islandPerimeter = function(grid) {
-        let res = 0;
-        for (let i = 0; i < grid.length; i++) {
-          for (let j = 0; j < grid[i].length; j++) {
-            if (!grid[i][j]) continue;
-            res += 4;
-            if (i > 0 && grid[ i - 1 ][ j ]) {
-              res -= 2;
-            }
-            if (j > 0 && grid[ i ][ j - 1 ]) {
-              res -= 2;
-            }
-          }
+      var rotateRight = function(head, k) {
+        let len = 0;
+        let curr = head;
+        let last = curr;
+        while(curr) {
+          curr = curr.next;
+          if (last.next) last = last.next;
+          len++;
         }
-        return res;
+        const num = k % len;
+        let fast = head;
+        for (let i = 0; i < len - num - 1; i++) {
+          fast = fast.next;
+        }
+        const begin = fast.next;
+        fast.next = null;
+        last.next = head;
+        return begin;
       };
-      console.log(
-        islandPerimeter([
-          [0,1,0,0],
-          [1,1,1,0],
-          [0,1,0,0],
-          [1,1,0,0]
-        ])
-      );
+
+      console.log(rotateRight(generateNode([1,2]), 1));
+
+      function ListNode(val) {
+        this.val = val;
+        this.next = null;
+      }
+      function generateNode(array) {
+        const res = new ListNode();
+        let curr = res;
+        for (let item of array) {
+          curr.next = new ListNode(item);
+          curr = curr.next;
+        }
+        return res.next;
+      }
     </script>
   </body>
 </html>
