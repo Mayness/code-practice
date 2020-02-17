@@ -991,7 +991,7 @@
         <a href='group/链表/回文链表.md'>回文链表</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -999,6 +999,16 @@
   <tr>	
     <td style="width: 300px;">	
         <a href='group/链表/排序链表.md'>排序链表</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/链表/旋转链表.md'>旋转链表</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
