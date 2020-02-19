@@ -19,7 +19,7 @@
         <a href='group/Array/动态规划/ 买卖股票的最佳时机（单笔交易）.md'> 买卖股票的最佳时机（单笔交易）</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -233,7 +233,7 @@
         <a href='group/Array/回溯算法/电话号码的字母组合.md'>电话号码的字母组合</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -243,7 +243,7 @@
         <a href='group/Array/回溯算法/盛最多水的容器.md'>盛最多水的容器</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
