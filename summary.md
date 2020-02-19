@@ -27,6 +27,7 @@ Set
 增加
 
 ## 二叉树
+### 遍历
 先序遍历  
 ![先序遍历](https://upload-images.jianshu.io/upload_images/2838289-4745ead9a13aaa9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/632/format/webp)
 
@@ -35,6 +36,15 @@ Set
 
 后序遍历  
 ![后序遍历](https://upload-images.jianshu.io/upload_images/2838289-40ce1a6b62a8dfc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/634/format/webp)
+
+## 堆
+堆(Heap)是利用完全二叉树维护的一组数据，主要分为两种：  
+最大堆：根节点最大的堆  
+最小堆：跟节点最小的堆  
+
+## 栈
+栈(Stack)在计算机科学中是限定仅在表尾进行`插入`或`删除`操作的线性表。`栈`是一种数据结构，它按照`后进先出`的原则存储数据，`先进入`的数据被压入`栈底`，`最后的数据`在`栈顶`，需要读数据的时候从`栈顶`开始`弹出数据`   
+栈是只能在`某一端插入`和`删除`的`特殊线性表`
 
 ## 函数
 颗粒化

@@ -1,11 +1,8 @@
-    0
-  0   1
- 0 1 2 3
-
-index + index
-
-1 1
-2 2 
-3 5
-
-
+script start
+console.log('async2 end') 
+console.log('Promise')
+console.log('script end')
+console.log('async1 end')
+console.log('promise1')
+console.log('promise2')
+console.log('setTimeout')
