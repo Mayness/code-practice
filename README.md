@@ -327,7 +327,7 @@
         <a href='group/Array/排序/合并区间.md'>合并区间</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -461,7 +461,7 @@
         <a href='group/Array/搜索/得到一个数组值的中点.md'>得到一个数组值的中点</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
