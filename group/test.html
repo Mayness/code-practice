@@ -15,45 +15,60 @@
   <body>
     <script>
       /*
-      你会得到一个整数数组。你的工作是用这个数组找到一个下标 N，
-      其中 N 左边的整数和等于 N 右边的整数和。如果没有下标，那么返回-1。  
+      编写一个函数来查找字符串数组中的最长公共前缀。
 
-      例如：
-      假设给定数组{1,2,3,4,3,2,1}:  
-      函数将返回索引 3，因为在数组的第 3 个位置，索引({1,2,3})左侧的和和索引({3,2,1})右侧的和都等于 6。  
+      如果不存在公共前缀，返回空字符串 ""。
 
-      再比如:  
-      给定数组{20,10，-80,10,10,15,35}  
-      在索引 0 处，左侧是{}  
-      右边是{10，-80,10,10,15,35}  
-      它们加起来都等于 0。(在这个问题中，空数组等于 0)  
-      索引 0 是左边和右边相等的地方。  
+      示例 1:
 
-      提示：  
-      如果给定一个包含多个答案的数组，则返回正确的最低索引。  
+      输入: ["flower","flow","flight"]
+      输出: "fl"
+      示例 2:
+
+      输入: ["dog","racecar","car"]
+      输出: ""
+      解释: 输入不存在公共前缀。
+      说明:
+
+      所有输入只包含小写字母 a-z 。
       */
-      function findEvenIndex(arr) {
-        arr.reverse();
-        if (arr.length < 2) return arr.length - 1;
-        let index = 0;
-        let left = 0;
-        let right = arr.reduce((total, item, index) => {
-          if (index === 0) {
-            total = 0;
-          } else {
-            total += item; 
+      function findNumberIn2DArray(arr, target) {
+        const xRange = [0, arr.length - 1];
+        if (!arr.length) return false;
+        const len = arr[0].length - 1;
+        const yRange = [0, len];
+        if (arr[ arr.length - 1 ][ len ] < target) return false;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i][0] === target || arr[i][len] === target) return true;
+          if (arr[i][0] > target) {
+            if (i === 0) return false;
+            xRange[1] = i - 1;
+            break;
           }
-          return total;
-        }, 0);
-        while(index + 1 < arr.length) {
-          if (left === right) return index;
-          left += arr[ index ];
-          right -= arr[ index + 1 ];
-          index++;
+          if (arr[i][len] < target) {
+            xRange[0] = i + 1;
+          }
         }
-        return left === right ? index : -1;
+        for (let i = 0; i < arr[ 0 ].length; i++) {
+          if (arr[ xRange[ 0 ] ][ i ] === target || arr[ xRange[ 1 ] ][ i ] === target) return true;
+          if (arr[ xRange[ 0 ] ][ i ] > target) {
+            yRange[ 1 ] = i;
+            break;
+          }
+          if (arr[ xRange[ 1 ] ][ i ] < target) {
+            yRange[ 0 ] = i + 1;
+          }
+        }
+        for (let i = xRange[0]; i <= xRange[ 1 ]; i++) {
+          for (let j = yRange[ 0 ]; j <= yRange[ 1 ]; j++) {
+            if (arr[ i ][ j ] === target) return true;
+          }
+        }
+        return false;
       }
-      console.log(findEvenIndex([20,10,-80,10,10,15,35]));
+      console.log(Solution([
+        [-5]
+      ], -10))
     </script>
   </body>
 </html>
