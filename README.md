@@ -596,6 +596,56 @@
   </tr>	
     	
   	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/3. 青蛙跳台阶问题.md'>3. 青蛙跳台阶问题</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/4. 旋转数组的最小数字.md'>4. 旋转数组的最小数字</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/5. 矩阵中的路径.md'>5. 矩阵中的路径</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/6. 机器人的运动范围.md'>6. 机器人的运动范围</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/7. 从尾到头打印链表.md'>7. 从尾到头打印链表</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
 	
   	
   </tbody>	
@@ -815,7 +865,7 @@
         <a href='group/help.md'>help</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>3</p>	
+        <p>4</p>	
       </td>	
   </tr>	
     	
@@ -868,6 +918,16 @@
       </td>	
       <td style="text-align: center;">	
         <p>1</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/二叉树/从前序与中序遍历序列构造二叉树.md'>从前序与中序遍历序列构造二叉树</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
       </td>	
   </tr>	
     	
