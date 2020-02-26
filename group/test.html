@@ -15,76 +15,43 @@
   <body>
     <script>
       /*
-      给定两个整数，分别表示分数的分子 numerator 和分母 denominator，
-      以字符串形式返回小数。
+      给定一个二叉树，返回其节点值的锯齿形层次遍历。
+      （即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。
 
-      如果小数部分为循环小数，则将循环的部分括在括号内。
-
-      示例 1:
-
-      ```
-      输入: numerator = 1, denominator = 2
-      输出: "0.5"
-      ```
-
-      示例 2:
+      例如：
+      给定二叉树 [3,9,20,null,null,15,7],
 
       ```
-      输入: numerator = 2, denominator = 1
-      输出: "2"
+           3
+          / \
+         9  20
+       /  \  / \
+      1   2   15  7
       ```
-
-      示例 3:
-
-      ```
-      输入: numerator = 2, denominator = 3
-      输出: "0.(6)"
-      ```
+      前序：[3,9,1,2,20,15,7]
+      中序：[1,9,2,3,15,20,7]
+      [1,9,2] [9,1,2]
       */
-      var fractionToDecimal = function(numerator, denominator) {
-        if (denominator === 1) return numerator + '';
-        if (numerator === 0) return '0';
-        // 先将除数和被除数都转换为正数，保留最后的负号
-        const flag = (numerator < 0 && denominator > 0) || (numerator > 0 && denominator < 0);
-        numerator = Math.abs(numerator);
-        denominator = Math.abs(denominator);
-        // 小数点位数
-        let digits = 0;
-        // 余数集合
-        // const numeraArray = [];
-        const numeraMap = {};
-        // 商集合
-        let res = [];
-        while (numerator !== 0) {
-          const quotient = Math.floor(numerator / denominator);
-          numerator %= denominator;
-          res.push(quotient);
-          const isIndex = numeraMap[ numerator ];
-          // 若之前出现过该余数则为无限循环小数，提取其中循环字段即可
-          if (isIndex >= 0) {
-            const decimals = res.splice(0, isIndex + 1);
-            digits -= res.length - 1;
-            decimals.push(`(${res.join('')})`);
-            res = decimals;
-            break;
-          }
-          numeraMap[ numerator ] = digits;
-          // 若余数小于除数，则小数部分退1位
-          if (0 < numerator && numerator < denominator) {
-            numerator *= 10;
-            digits++;
-          }
-        }
-        if (flag) {
-          res.unshift('-');
-        }
-        // 补上小数点
-        if (digits !== 0) {
-          res.splice(res.length - digits, 0, '.');
-        }
-        return res.join('');
+      var movingCount = function(m, n, k) {
+        const visited = {};
+        let res = 0;
+        (function travel(x, y) {
+          if (x < 0 || y < 0 || x >= m || y >= n || visited[ `${x},${y}` ]) return;
+          let sum = 0;
+          if (x === 100) x = 1;
+          if (y === 100) y = 1;
+          sum = x % 10 + y % 10 + Math.floor(x / 10) + Math.floor(y / 10);
+          visited[ `${x},${y}` ] = true;
+          if (sum > k) return;
+          res++;
+          travel(x + 1, y);
+          travel(x - 1, y);
+          travel(x, y + 1);
+          travel(x, y - 1);
+        })(0, 0)
+        return res;
       };
-      console.log(fractionToDecimal(8, 7));
+      console.log(movingCount(100, 100, 30));
     </script>
   </body>
 </html>
