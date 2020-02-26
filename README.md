@@ -591,7 +591,7 @@
         <a href='group/Fragment/2. 二维数组中的查找.md'>2. 二维数组中的查找</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -689,7 +689,7 @@
         <a href='group/Number/分数到小数.md'>分数到小数</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
