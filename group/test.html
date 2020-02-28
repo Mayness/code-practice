@@ -15,43 +15,59 @@
   <body>
     <script>
       /*
-      给定一个二叉树，返回其节点值的锯齿形层次遍历。
-      （即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。
+      在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
 
-      例如：
-      给定二叉树 [3,9,20,null,null,15,7],
+      示例 1:
+      // min = 2
+      // curr = ListNode();
+      输入: 4->2->1->3
+      输出: 1->2->3->4
+      示例 2:
 
-      ```
-           3
-          / \
-         9  20
-       /  \  / \
-      1   2   15  7
-      ```
-      前序：[3,9,1,2,20,15,7]
-      中序：[1,9,2,3,15,20,7]
-      [1,9,2] [9,1,2]
+      输入: -1->5->3->4->0
+      输出: -1->0->3->4->5
+
+     TreeNode {
+  val: 1,
+  right: TreeNode { val: 1, right: null, left: null },
+  left:
+   TreeNode {
+     val: 0,
+     right: TreeNode { val: -3, right: null, left: null },
+     left: TreeNode { val: -4, right: null, left: null } } }
+     
+     TreeNode {
+  val: 1,
+  right: null,
+  left: TreeNode { val: -4, right: null, left: null } }
       */
-      var movingCount = function(m, n, k) {
-        const visited = {};
-        let res = 0;
-        (function travel(x, y) {
-          if (x < 0 || y < 0 || x >= m || y >= n || visited[ `${x},${y}` ]) return;
-          let sum = 0;
-          if (x === 100) x = 1;
-          if (y === 100) y = 1;
-          sum = x % 10 + y % 10 + Math.floor(x / 10) + Math.floor(y / 10);
-          visited[ `${x},${y}` ] = true;
-          if (sum > k) return;
-          res++;
-          travel(x + 1, y);
-          travel(x - 1, y);
-          travel(x, y + 1);
-          travel(x, y - 1);
-        })(0, 0)
-        return res;
-      };
-      console.log(movingCount(100, 100, 30));
+      var sortList = function(head) {
+        if (!head) return head;
+        let fast = head;
+        let slow = head;
+        while(fast && fast.next) {
+          slow = slow.next;
+          fast = fast.next.next;
+        }
+        const back = slow.next;
+        slow.next = null;
+        return merge(sortList(head), sortList(back));
+      }
+
+      function merge(l1, l2) {
+        const node = new ListNode();
+        const curr = node;
+        while(l1 && l2) {
+          if (l1.val < l2.val) {
+            curr.next = l1;
+          } else {
+            curr.next = l2;
+          }
+          curr = curr.next;
+        }
+        curr.next = (l1 || l2);
+        return curr;
+      }
     </script>
   </body>
 </html>
