@@ -22,7 +22,7 @@
 <!-- content -->	
 <% 	
 (function renderView(data, index = 2) {	
-  for (const item in data) {	
+  for (const item of Object.keys(data).sort((a, b) => parseInt(a) - parseInt(b))) {	
     if (isObject(data[ item ])) { 	
       if (tableCloseFlag) {	
         // 渲染table end 标签	
