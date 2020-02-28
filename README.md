@@ -588,6 +588,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Fragment/10. 树的子结构.md'>10. 树的子结构</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Fragment/2. 二维数组中的查找.md'>2. 二维数组中的查找</a>	
       </td>	
       <td style="text-align: center;">	
@@ -639,6 +649,26 @@
   <tr>	
     <td style="width: 300px;">	
         <a href='group/Fragment/7. 从尾到头打印链表.md'>7. 从尾到头打印链表</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/8. 重建二叉树.md'>8. 重建二叉树</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/9. 剪绳子.md'>9. 剪绳子</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -991,7 +1021,7 @@
         <a href='group/图/岛屿的周长.md'>岛屿的周长</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -1075,7 +1105,7 @@
         <a href='group/链表/合并两个有序链表.md'>合并两个有序链表</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -1095,7 +1125,7 @@
         <a href='group/链表/排序链表.md'>排序链表</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
