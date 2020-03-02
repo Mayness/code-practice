@@ -273,7 +273,7 @@
         <a href='group/Array/回溯算法/重复字符的最长子串.md'>重复字符的最长子串</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -671,7 +671,7 @@
         <a href='group/Fragment/9. 剪绳子.md'>9. 剪绳子</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -699,6 +699,16 @@
   <tr>	
     <td style="width: 300px;">	
         <a href='group/Fragment/12. 对称的二叉树.md'>12. 对称的二叉树</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/13. 调整数组顺序使奇数位于偶数前面.md'>13. 调整数组顺序使奇数位于偶数前面</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
