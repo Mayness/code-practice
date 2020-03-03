@@ -344,6 +344,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/排序/合并排序的数组.md'>合并排序的数组</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/排序/字典序排数.md'>字典序排数</a>	
       </td>	
       <td style="text-align: center;">	
@@ -588,7 +598,7 @@
     	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/1. 数组中重复的数字.md'>1. 数组中重复的数字</a>	
+        <a href='group/Fragment/3.数组中重复的数字.md'>3.数组中重复的数字</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -598,17 +608,7 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/2. 二维数组中的查找.md'>2. 二维数组中的查找</a>	
-      </td>	
-      <td style="text-align: center;">	
-        <p>1</p>	
-      </td>	
-  </tr>	
-    	
-  	
-  <tr>	
-    <td style="width: 300px;">	
-        <a href='group/Fragment/3. 青蛙跳台阶问题.md'>3. 青蛙跳台阶问题</a>	
+        <a href='group/Fragment/4.二维数组中的查找.md'>4.二维数组中的查找</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -618,7 +618,7 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/4. 旋转数组的最小数字.md'>4. 旋转数组的最小数字</a>	
+        <a href='group/Fragment/6.从尾到头打印链表.md'>6.从尾到头打印链表</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -628,7 +628,7 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/5. 矩阵中的路径.md'>5. 矩阵中的路径</a>	
+        <a href='group/Fragment/7.重建二叉树.md'>7.重建二叉树</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -638,7 +638,7 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/6. 机器人的运动范围.md'>6. 机器人的运动范围</a>	
+        <a href='group/Fragment/10-2.青蛙跳台阶问题.md'>10-2.青蛙跳台阶问题</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -648,7 +648,7 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/7. 从尾到头打印链表.md'>7. 从尾到头打印链表</a>	
+        <a href='group/Fragment/11.旋转数组的最小数字.md'>11.旋转数组的最小数字</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -658,7 +658,7 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/8. 重建二叉树.md'>8. 重建二叉树</a>	
+        <a href='group/Fragment/12.矩阵中的路径.md'>12.矩阵中的路径</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -668,17 +668,7 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/9. 剪绳子.md'>9. 剪绳子</a>	
-      </td>	
-      <td style="text-align: center;">	
-        <p>1</p>	
-      </td>	
-  </tr>	
-    	
-  	
-  <tr>	
-    <td style="width: 300px;">	
-        <a href='group/Fragment/10. 树的子结构.md'>10. 树的子结构</a>	
+        <a href='group/Fragment/13.机器人的运动范围.md'>13.机器人的运动范围</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -688,7 +678,7 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/11. 二叉树的镜像.md'>11. 二叉树的镜像</a>	
+        <a href='group/Fragment/14-1.剪绳子.md'>14-1.剪绳子</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -698,7 +688,7 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/12. 对称的二叉树.md'>12. 对称的二叉树</a>	
+        <a href='group/Fragment/15.二进制中1的个数.md'>15.二进制中1的个数</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -708,7 +698,47 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/13. 调整数组顺序使奇数位于偶数前面.md'>13. 调整数组顺序使奇数位于偶数前面</a>	
+        <a href='group/Fragment/16.数值的整数次方.md'>16.数值的整数次方</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/21.调整数组顺序使奇数位于偶数前面.md'>21.调整数组顺序使奇数位于偶数前面</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/26.树的子结构.md'>26.树的子结构</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/27.二叉树的镜像.md'>27.二叉树的镜像</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/28.对称的二叉树.md'>28.对称的二叉树</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
@@ -789,7 +819,7 @@
         <a href='group/Number/Pow(x, n).md'>Pow(x, n)</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
