@@ -41,27 +41,59 @@
   right: null,
   left: TreeNode { val: -4, right: null, left: null } }
       */
-      var myPow = function(x, n) {
-        if (n === 0 || x === 1) return 1;
-        if (x === 0) return 0;
-        if (n < 0) {
-          x = 1 / x;
-          n = -n;
+      /*
+        0 空格子
+        1 好🍊
+        2 烂🍊
+        3 被传染的烂🍊
+      */
+      var orangesRotting = function(grid) {
+        const horizontal = grid.length;
+        if (!horizontal) return -1;
+        const vertical = grid[0].length;
+        if (!vertical) return -1;
+        let badApplyArr = [];
+        let number1Num = 0;
+        for (let i = 0; i < horizontal; i++) {
+          for (let j = 0; j < vertical; j++) {
+            if (grid[i][j] === 2) badApplyArr.push([i, j]);
+            if (grid[i][j] === 1) number1Num++;
+          }
         }
-        let res = 1;
-        (function travel(value, i) {
-          if (n >= 2 * i) {
-            n = travel(value * value, 2 * i);
+        if (!badApplyArr.length) return number1Num ? -1 : 0;
+        let num = 0;
+        while (badApplyArr.length) {
+          const arr = [];
+          for (let item of badApplyArr) {
+            const x = item[0];
+            const y = item[1];
+            if (x > 0 && grid[x - 1][y] === 1) {
+              grid[x - 1][y] = 2;
+              arr.push([x - 1, y]);
+              number1Num--;
+            }
+            if (x < horizontal - 1 && grid[x + 1][y] === 1) {
+              grid[x + 1][y] = 2;
+              arr.push([x + 1, y]);
+              number1Num--;
+            }
+            if (y > 0 && grid[x][y - 1] === 1) {
+              grid[x][y - 1] = 2;
+              arr.push([x, y - 1]);
+              number1Num--;
+            }
+            if (y < vertical - 1 && grid[x][y + 1] === 1) {
+              grid[x][y + 1] = 2;
+              arr.push([x, y + 1]);
+              number1Num--;
+            }
           }
-          if (n >= i) {
-            res *= value;
-            n -= i;
-          }
-          return n;
-        })(x, 1);
-        return res;
+          if (arr.length) num++;
+          badApplyArr = arr;
+        }
+        return number1Num ? -1 : num;
       };
-      console.log(myPow(-2, 0));
+      console.log(orangesRotting([[2, 1, 1], [0, 1, 1], [0, 1, 1]]));
     </script>
   </body>
 </html>
