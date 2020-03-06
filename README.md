@@ -458,6 +458,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/搜索/和为s的连续正数序列.md'>和为s的连续正数序列</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/搜索/在排序数组中查找元素的第一个和最后一个位置.md'>在排序数组中查找元素的第一个和最后一个位置</a>	
       </td>	
       <td style="text-align: center;">	
@@ -1047,7 +1057,7 @@
         <a href='group/二叉树/填充每个节点的下一个右侧节点指针.md'>填充每个节点的下一个右侧节点指针</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
