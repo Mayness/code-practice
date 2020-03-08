@@ -119,7 +119,7 @@
         <a href='group/Array/动态规划/零钱兑换✏️.md'>零钱兑换✏️</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -1245,7 +1245,7 @@
         <a href='group/链表/相交链表.md'>相交链表</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
