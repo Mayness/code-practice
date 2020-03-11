@@ -14,62 +14,10 @@
   </style>
   <body>
     <script>
-      /*
-      在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
-
-      示例 1:
-      // min = 2
-      // curr = ListNode();
-      输入: 4->2->1->3
-      输出: 1->2->3->4
-      示例 2:
-
-      输入: -1->5->3->4->0
-      输出: -1->0->3->4->5
-
-     TreeNode {
-  val: 1,
-  right: TreeNode { val: 1, right: null, left: null },
-  left:
-   TreeNode {
-     val: 0,
-     right: TreeNode { val: -3, right: null, left: null },
-     left: TreeNode { val: -4, right: null, left: null } } }
-     
-     TreeNode {
-  val: 1,
-  right: null,
-  left: TreeNode { val: -4, right: null, left: null } }
-      */
-      /*
-        0 空格子
-        1 好🍊
-        2 烂🍊
-        3 被传染的烂🍊
-      */
-      var coinChange = function(coins, amount) {
-        if (coins.length === 0) return -1;
-        if (amount === 0) return 0;
-        if (coins[0] > amount) return -1;
-        coins.sort((a, b) => a - b);
-        function change(index, remain, num) {
-          if (remain === 0) return num;
-          if (index < 0) return 0;
-          while (index >= 0) {
-            if (remain === 0) return num;
-            if (coins[index] > remain) {
-              const res = change(index - 1, remain, num);
-              if (res) return res;
-            } else {
-              const res = change(index, remain - coins[index], num + 1);
-              if (res) return res;
-            }
-            index--;
-          }
-        }
-        return change(coins.length - 1, amount, 0) || -1;
-      };
-      console.log(coinChange([186,419,83,408], 6249));
+      performance.mark("Begin");
+      console.log(111);
+      performance.mark("End");
+      console.log(performance.getEntries());
     </script>
   </body>
 </html>
