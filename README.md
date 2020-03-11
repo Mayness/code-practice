@@ -19,7 +19,7 @@
         <a href='group/Array/动态规划/ 买卖股票的最佳时机（单笔交易）.md'> 买卖股票的最佳时机（单笔交易）</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>2</p>	
+        <p>3</p>	
       </td>	
   </tr>	
     	
@@ -174,6 +174,16 @@
       </td>	
       <td style="text-align: center;">	
         <p>1</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Array/回溯算法/将数组分成和相等的三个部分.md'>将数组分成和相等的三个部分</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
       </td>	
   </tr>	
     	
@@ -1028,6 +1038,16 @@
       </td>	
       <td style="text-align: center;">	
         <p>2</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/二叉树/二叉树的直径.md'>二叉树的直径</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
       </td>	
   </tr>	
     	
