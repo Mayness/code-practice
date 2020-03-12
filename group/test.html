@@ -14,10 +14,37 @@
   </style>
   <body>
     <script>
-      performance.mark("Begin");
-      console.log(111);
-      performance.mark("End");
-      console.log(performance.getEntries());
+      var isMatch = function(s, p) {
+        const rows = s.length;
+        const colums = p.length;
+        const dp = Array.from({ length: rows + 1 }, x => [ false ]);
+        dp[ 0 ][ 0 ] = true;
+        for (let j = 1; j <= colums; j++) {
+          dp[ 0 ][ j ] = p[ j - 1 ] === '*' && dp[ 0 ][ j - 2 ]; 
+        }
+        for (let i = 1; i <= rows; i++) {
+          for (let j = 1; j <= colums; j++) {
+            let currS = s[ i - 1 ];
+            let currP = p[ j - 1 ];
+            if (currP === '*') {
+              let beforeP = p[ j - 2 ];
+              if ((j > 1 && beforeP === currS) || beforeP === '.') {
+                dp[ i ][ j ] = !!dp[ i ][ j - 2 ] || dp[ i ][ j - 1 ] || dp[ i - 1 ][ j ]
+              } else {
+                dp[ i ][ j ] = !!dp[ i ][ j - 2 ];
+              }
+            } else {
+              if (currS === currP || currP === '.') {
+                dp[ i ][ j ] = dp[ i - 1 ][ j - 1 ];
+              } else {
+                dp[ i ][ j ] = false;
+              }
+            }
+          }
+        }
+        return dp[ rows ][ colums ];
+      }
+      isMatch('aaa', 'a*');
     </script>
   </body>
 </html>
