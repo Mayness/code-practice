@@ -568,6 +568,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/搜索/求众数 II.md'>求众数 II</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/搜索/第一个错误版本.md'>第一个错误版本</a>	
       </td>	
       <td style="text-align: center;">	
@@ -741,7 +751,7 @@
         <a href='group/Fragment/19.正则表达式匹配.md'>19.正则表达式匹配</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
