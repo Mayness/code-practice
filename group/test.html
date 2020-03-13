@@ -14,37 +14,42 @@
   </style>
   <body>
     <script>
-      var isMatch = function(s, p) {
-        const rows = s.length;
-        const colums = p.length;
-        const dp = Array.from({ length: rows + 1 }, x => [ false ]);
-        dp[ 0 ][ 0 ] = true;
-        for (let j = 1; j <= colums; j++) {
-          dp[ 0 ][ j ] = p[ j - 1 ] === '*' && dp[ 0 ][ j - 2 ]; 
-        }
-        for (let i = 1; i <= rows; i++) {
-          for (let j = 1; j <= colums; j++) {
-            let currS = s[ i - 1 ];
-            let currP = p[ j - 1 ];
-            if (currP === '*') {
-              let beforeP = p[ j - 2 ];
-              if ((j > 1 && beforeP === currS) || beforeP === '.') {
-                dp[ i ][ j ] = !!dp[ i ][ j - 2 ] || dp[ i ][ j - 1 ] || dp[ i - 1 ][ j ]
-              } else {
-                dp[ i ][ j ] = !!dp[ i ][ j - 2 ];
-              }
-            } else {
-              if (currS === currP || currP === '.') {
-                dp[ i ][ j ] = dp[ i - 1 ][ j - 1 ];
-              } else {
-                dp[ i ][ j ] = false;
-              }
-            }
+      var majorityElement = function(nums) {
+        let candidate1 = Number.MAX_SAFE_INTEGER;
+        let candidate2 = Number.MAX_SAFE_INTEGER;
+        let count1 = 0;
+        let count2 = 0;
+        for (let i = 0; i < nums.length; i++) {
+          if (candidate2 !== nums[ i ] && count1 === 0) {
+            candidate1 = nums[ i ];
+          } else if (count2 === 0) {
+            candidate2 = nums[ i ];
+          }
+          if (nums[ i ] === candidate1) {
+            count1++;
+          } else if (nums[ i ] === candidate2) {
+            count2++;
+          } else {
+            count1--;
+            count2--;
           }
         }
-        return dp[ rows ][ colums ];
-      }
-      isMatch('aaa', 'a*');
+        count1 = 0;
+        count2 = 0;
+        for (let item of nums) {
+          if (item === candidate1) {
+            count1++;
+          } else if (item === candidate2) {
+            count2++;
+          }
+        }
+        const result = [];
+        const len = nums.length / 3;
+        if (count1 > len) result.push(candidate1);
+        if (count2 > len) result.push(candidate2);
+        return result;
+      };
+      console.log(majorityElement([1,2,2,3,2,1,1,3]));
     </script>
   </body>
 </html>
