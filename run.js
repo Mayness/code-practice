@@ -17,7 +17,7 @@ const resetUpdate = false;
   const view = await ejs.renderFile(path.join(template.base, template.file), {
     data: pathObj
   });
-  fs.writeFileSync(output, view);
+  // fs.writeFileSync(output, view);
 })();
 
 /**
@@ -53,17 +53,18 @@ async function readFile(root) {
         recursionFile((res[rename] = {}), filePath, origin[rename]);
       } else if (/(.md)$/g.test(item)) {
         let update = 0;
-        const modifyTime = JSON.stringify(stat.mtime);
-        // const buffer = fs.readFileSync(filePath);
-        // const hash = crypto.createHash('sha256');
-        // hash.update(buffer);
-        // const fileHash = hash.digest('hex').slice(-12);
+        // 由于在github action编译环境每次都会更新文件modifyTime，因此不能用这个来判断文件是否更新
+        // const modifyTime = JSON.stringify(stat.mtime);
+        const buffer = fs.readFileSync(filePath);
+        const hash = crypto.createHash('sha256');
+        hash.update(buffer);
+        const fileHash = hash.digest('hex').slice(-12);
         // 比较内容修改时间，若修改则+1
         if (!resetUpdate && origin[rename]) {
           const num = origin[rename][1];
-          update = origin[rename][2] !== modifyTime ? num + 1 : num;
+          update = origin[rename][2] !== fileHash ? num + 1 : num;
         }
-        res[rename] = [filePath, update, modifyTime];
+        res[rename] = [filePath, update, fileHash];
       }
     }
   }
