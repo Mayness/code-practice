@@ -53,7 +53,7 @@ async function readFile(root) {
         recursionFile((res[rename] = {}), filePath, origin[rename]);
       } else if (/(.md)$/g.test(item)) {
         let update = 0;
-        // 由于在github action编译环境每次都会更新文件modifyTime，因此不能用这个来判断文件是否更新
+        // 由于在github action编译环境每次都会更新文件modifyTime，因此不能用这个来判断文件是否更新 
         // const modifyTime = JSON.stringify(stat.mtime);
         const buffer = fs.readFileSync(filePath);
         const hash = crypto.createHash('sha256');
