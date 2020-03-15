@@ -58,7 +58,7 @@ async function readFile(root) {
         // const hash = crypto.createHash('sha256');
         // hash.update(buffer);
         // const fileHash = hash.digest('hex').slice(-12);
-        // 比较内容hash，若修改则+1
+        // 比较内容修改时间，若修改则+1
         if (!resetUpdate && origin[rename]) {
           const num = origin[rename][1];
           update = origin[rename][2] !== modifyTime ? num + 1 : num;
