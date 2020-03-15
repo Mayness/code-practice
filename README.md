@@ -39,7 +39,7 @@
         <a href='group/Array/动态规划/Longest Increasing Subsequence.md'>Longest Increasing Subsequence</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -571,7 +571,7 @@
         <a href='group/Array/搜索/求众数 II.md'>求众数 II</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
