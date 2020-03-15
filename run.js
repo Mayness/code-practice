@@ -17,7 +17,7 @@ const resetUpdate = false;
   const view = await ejs.renderFile(path.join(template.base, template.file), {
     data: pathObj
   });
-  // fs.writeFileSync(output, view);
+  fs.writeFileSync(output, view);
 })();
 
 /**
