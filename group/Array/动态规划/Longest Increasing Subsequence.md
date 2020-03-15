@@ -16,7 +16,8 @@
 你算法的时间复杂度应该为 O(n2) 。
 进阶: 你能将算法的时间复杂度降低到 O(n log n) 吗?
 
-From: [最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/submissions/) 
+From: [最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/submissions/)
+
 ## 方法 1：回溯算法
 
 ### 分析
@@ -57,10 +58,12 @@ var lengthOfLIS = function(nums) {
 已知条件：  
 dp[ 0 ] = 0
 dp[ 1 ] = 1
-那么单次路径下的公式为：  
+那么单次路径下的公式为：
+
 ```
-dp[i] = Math.max(dp[i], dp[j] + 1);  
+dp[i] = Math.max(dp[i], dp[j] + 1);
 ```
+
 因为需要加上最后一步，所以需要+1
 
 ```
@@ -92,5 +95,42 @@ var lengthOfLIS = function(nums) {
     max = Math.max(max, res[i]);
   }
   return max;
+};
+```
+
+## 方法 3：二分法 + 动态规划
+
+### 分析
+由于在`nums`数组中每一个数会影响到后面数是否是递增规律，因此可以拟定一个数组`list`来保存最最长上升序列。其中需要满足的条件有：
++ 若`nums[ i ]`大于`list[ list.length - 1 ]`即最后一个数时，将`nums[ i ]`推入到`list`数组中
++ 若`nums[ i ]`小于`list`最后一个数，更新`list`数组，找到比`nums[ i ]`稍大的一位数，进行替换。对于其本质上可以理解为是更新`list[ list.length - 1 ]`的值，使其更小，目的是后续可以推入更多的数。而其查找方式可以用`二分法查询`
+
+最后得到的结果`list`不一定是真正的最长上升序列，但是其长度是正确的。
+其时间复杂满足`O(n log n)`
+### 解答
+
+```javascript
+var lengthOfLIS = function(nums) {
+  if (!nums.length) return 0;
+  const list = [nums[0]];
+  for (let i = 1; i < nums.length; i++) {
+    const item = nums[i];
+    if (item > list[list.length - 1]) {
+      list.push(item);
+      continue;
+    }
+    let left = 0;
+    let right = list.length - 1;
+    while (left < right) {
+      const mid = (left + right) >>> 1;
+      if (list[mid] < item) {
+        left = mid + 1;
+      } else {
+        right = mid;
+      }
+    }
+    if (list[left] > item) list[left] = item;
+  }
+  return list.length;
 };
 ```
