@@ -781,7 +781,7 @@
         <a href='group/Fragment/27.二叉树的镜像.md'>27.二叉树的镜像</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -789,6 +789,26 @@
   <tr>	
     <td style="width: 300px;">	
         <a href='group/Fragment/28.对称的二叉树.md'>28.对称的二叉树</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>1</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/29.顺时针打印矩阵.md'>29.顺时针打印矩阵</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/30.包含min函数的栈.md'>30.包含min函数的栈</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
