@@ -14,30 +14,47 @@
   </style>
   <body>
     <script>
-      var lengthOfLIS = function(nums) {
-        if (!nums.length) return 0;
-        const list = [nums[0]];
-        for (let i = 1; i < nums.length; i++) {
-          const item = nums[i];
-          if (item > list[list.length - 1]) {
-            list.push(item);
+      /**
+       * @param {number[][]} matrix
+       * @return {number[]}
+       */
+      var spiralOrder = function(matrix) {
+        if (!matrix.length) return [];
+        const res = [];
+        let left = 0;
+        let right = matrix[0].length - 1;
+        let top = 0;
+        let bottom = matrix.length - 1;
+        let direction = 'toRight';
+        while (left <= right || top <= bottom) {
+          if (direction === 'toRight') {
+            for (let i = left; i <= right; i++) res.push(matrix[top][i]);
+            top--;
+            direction = 'toBottom';
             continue;
           }
-          let left = 0;
-          let right = list.length - 1;
-          while (left < right) {
-            const mid = (left + right) >>> 1;
-            if (list[mid] < item) {
-              left = mid + 1;
-            } else {
-              right = mid;
-            }
+          if (direction === 'toBottom') {
+            for (let i = top; i <= bottom; i++) res.push(matrix[i][right]);
+            right--;
+            direction = 'toLeft';
+            continue;
           }
-          if (list[left] > item) list[left] = item;
+          if (direction === 'toLeft') {
+            for (let i = right; i >= left; i--) res.push(matrix[bottom][i]);
+            bottom--;
+            direction = 'toTop';
+            continue;
+          }
+          if (direction === 'toTop') {
+            for (let i = bottom; i >= top; i--) res.push(matrix[i][left]);
+            left--;
+            direction = 'toRight';
+            continue;
+          }
         }
-        return list.length;
+        return res;
       };
-      console.log(lengthOfLIS([10, 9, 2, 5, 3, 4]));
+      console.log(spiralOrder([[1,2,3],[4,5,6],[7,8,9]]));
       // 4 10
       // 3
     </script>
