@@ -816,6 +816,36 @@
   </tr>	
     	
   	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/31.栈的压入、弹出序列.md'>31.栈的压入、弹出序列</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/32-1.从上到下打印二叉树.md'>32-1.从上到下打印二叉树</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/32-2.从上到下打印二叉树 II.md'>32-2.从上到下打印二叉树 II</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
 	
   	
   </tbody>	
