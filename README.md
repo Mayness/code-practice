@@ -846,6 +846,16 @@
   </tr>	
     	
   	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/33.二叉搜索树的后序遍历序列.md'>33.二叉搜索树的后序遍历序列</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
 	
   	
   </tbody>	
@@ -1127,7 +1137,7 @@
         <a href='group/二叉树/二叉树的锯齿形层次遍历.md'>二叉树的锯齿形层次遍历</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
