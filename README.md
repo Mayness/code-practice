@@ -856,6 +856,26 @@
   </tr>	
     	
   	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/34.二叉树中和为某一值的路径.md'>34.二叉树中和为某一值的路径</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/36.二叉搜索树与双向链表.md'>36.二叉搜索树与双向链表</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
 	
   	
   </tbody>	
