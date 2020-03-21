@@ -18,24 +18,19 @@
         this.val = val;
         this.left = this.right = null;
       }
-      function generateTreeNode(array) {
-        const arr = [];
-        let index = 0;
-        while (array.length) {
-          arr.push(array.splice(0, Math.pow(2, index)));
-          index++;
-        }
-        function travel(index, i) {
-          if (!arr[index] || arr[index][i] === undefined) return null;
-          const tree = new TreeNode(arr[index][i]);
-          tree.left = travel(index + 1, 2 * i);
-          tree.right = travel(index + 1, 2 * i + 1);
-          return tree;
-        }
-        return travel(0, 0);
-      }
 
-      console.log(generateTreeNode([1,2,3,4,5]));
+      var canMeasureWater = function(x, y, z) {
+        if (z > x + y) return false;
+        const map = {};
+        return (function travel(currX, currY) {
+          if (map[`${currX},${currY}`]) return false;
+          map[`${currX},${currY}`] = true;
+          if (currX + currY === z) return true;
+          const sum = currX + currY;
+          return travel(currX, 0) || travel(0, currY) || travel(currX, y) || travel(x, currY) || travel(sum > x ? x : sum, sum > x ? sum - x : 0) || travel(sum > y ? sum - y : 0, sum > y ? y : sum);
+        })(0, 0);
+      };
+      console.log(canMeasureWater(2, 6, 5));
     </script>
   </body>
 </html>
