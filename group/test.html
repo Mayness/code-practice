@@ -14,23 +14,44 @@
   </style>
   <body>
     <script>
-      function TreeNode(val) {
-        this.val = val;
-        this.left = this.right = null;
-      }
-
-      var canMeasureWater = function(x, y, z) {
-        if (z > x + y) return false;
-        const map = {};
-        return (function travel(currX, currY) {
-          if (map[`${currX},${currY}`]) return false;
-          map[`${currX},${currY}`] = true;
-          if (currX + currY === z) return true;
-          const sum = currX + currY;
-          return travel(currX, 0) || travel(0, currY) || travel(currX, y) || travel(x, currY) || travel(sum > x ? x : sum, sum > x ? sum - x : 0) || travel(sum > y ? sum - y : 0, sum > y ? y : sum);
-        })(0, 0);
+      var minIncrementForUnique = function(A) {
+        if (A.length <= 1) return 0;
+        let res = 0;
+        const arr = [ A[ 0 ] ];
+        for (let i = 1; i < A.length; i++) {
+          if (arr[ arr.length - 1 ] < A[i]) {
+            arr.push(A[i]);
+            continue;
+          }
+          if (arr[ 0 ] > A[i]) {
+            arr.unshift(A[i]);
+            continue;
+          }
+          let left = 0;
+          let right = arr.length;
+          let value = A[ i ];
+          while (left < right) {
+            const mid = (left + right) >>> 1;
+            if (mid >= arr.length) {
+              left = arr.length;
+              break;
+            }
+            if (arr[mid] > value) {
+              right = mid;
+            } else if (arr[mid] < value) {
+              left = mid + 1;
+            } else {
+              res++;
+              value++;
+              left++;
+              right++;
+            }
+          }
+          arr.splice(left, 0, value);
+        }
+        return res;
       };
-      console.log(canMeasureWater(2, 6, 5));
+      console.log(minIncrementForUnique([0,0]));
     </script>
   </body>
 </html>
