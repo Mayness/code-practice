@@ -458,6 +458,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/搜索/使数组唯一的最小增量.md'>使数组唯一的最小增量</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/搜索/只出现一次的数字.md'>只出现一次的数字</a>	
       </td>	
       <td style="text-align: center;">	
