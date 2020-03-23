@@ -327,7 +327,7 @@
         <a href='group/Array/排序/下一个排列.md'>下一个排列</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -889,6 +889,16 @@
   <tr>	
     <td style="width: 300px;">	
         <a href='group/Fragment/37.序列化二叉树.md'>37.序列化二叉树</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/39.数组中出现次数超过一半的数字.md'>39.数组中出现次数超过一半的数字</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
