@@ -906,6 +906,16 @@
   </tr>	
     	
   	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/43.1～n整数中1出现的次数.md'>43.1～n整数中1出现的次数</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
 	
   	
   </tbody>	
