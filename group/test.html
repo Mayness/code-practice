@@ -8,16 +8,28 @@
   </head>
   <body>
     <script>
-      var fib = function(n) {
-        if (n <= 1) return n;
-        let before = 0;
-        let curr = 1;
-        for (let i = 2; i <= n; i++) {
-          [curr, before] = [before + curr, curr];
+      var countDigitOne = function(n) {
+        let num = n;
+        let res = 0;
+        let before = 1;
+        let pow = Math.pow(10, String(n).length - 1);
+        while(pow >= 1) {
+          if ((2 * pow - 1) <= n) {
+            res += pow * before;
+          } else {
+            res += (n - pow + 1) + (pow * (before - 1));
+          }
+          before = Math.floor(num / pow) + 1;
+          n = n % pow;
+          pow /= 10;
+          if (n < pow) {
+            n += 9 * pow;
+            before--;
+          }
         }
-        return curr;
+        return res;
       };
-      console.log(fib(10));
+      console.log(countDigitOne(2102));
     </script>
   </body>
 </html>
