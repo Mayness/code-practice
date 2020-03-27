@@ -8,28 +8,26 @@
   </head>
   <body>
     <script>
-      var countDigitOne = function(n) {
-        let num = n;
-        let res = 0;
-        let before = 1;
-        let pow = Math.pow(10, String(n).length - 1);
-        while(pow >= 1) {
-          if ((2 * pow - 1) <= n) {
-            res += pow * before;
+      var lengthOfLongestSubstring = function(s) {
+        let map = {};
+        let max = 0;
+        let left = 0;
+        let right = 0;
+        while (right < s.length) {
+          const item = s[right];
+          if (map[ item ] >= 0 && map[ item ] >= left) {
+            left = map[ item ] + 1;
+            map[ item ] = right;
           } else {
-            res += (n - pow + 1) + (pow * (before - 1));
+            map[ item ] = right;
+            max = Math.max(right - left + 1, max);
           }
-          before = Math.floor(num / pow) + 1;
-          n = n % pow;
-          pow /= 10;
-          if (n < pow) {
-            n += 9 * pow;
-            before--;
-          }
+          right++;
         }
-        return res;
+        return max;
       };
-      console.log(countDigitOne(2102));
+      console.log(lengthOfLongestSubstring("dvdf"));
+
     </script>
   </body>
 </html>

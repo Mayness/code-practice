@@ -77,11 +77,19 @@ function Iterator(k) {
 ```
 
 ### hyphenate a camelCase string.
+code: 
+
 ```javascript
 var hyphenateRE = /\B([A-Z])/g;
-const hyphenate = cached((str) => {
+function hyphenate(str) {
   return str.replace(hyphenateRE, '-$1').toLowerCase()
-})
+}
+```
+
+example:
+
+```javascript
+hyphenate('helloWorld');  // hello-world
 ```
 
 ### get repeat string through the RegExp
@@ -90,4 +98,25 @@ function getReapeat(string) {
   // 匹配重复出现的字符 （.）是任意字符,如果只匹配重复的数字则可以换成\d  (?=.*\1) 是断言 表示任意字符与第一个捕获的内容至少出现了两次
   return string.match(/(.)(?=.*\1)/g);
 }
+```
+
+example:
+
+```javascript
+getReapeat('aaabbc') // ['a', 'a', 'b']
+```
+
+### get the greatest common divisor of two Numbers
+```javascript
+function gcd(a, b) {
+  if (b === 0) return a;
+  return gcd(b, a % b);
+} 
+```
+
+example:
+
+```javascript
+gcd(4, 8) // 4
+gcd(7, 8) // 1
 ```
