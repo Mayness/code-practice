@@ -911,6 +911,16 @@
         <a href='group/Fragment/43.1～n整数中1出现的次数.md'>43.1～n整数中1出现的次数</a>	
       </td>	
       <td style="text-align: center;">	
+        <p>1</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/44.数字序列中某一位的数字.md'>44.数字序列中某一位的数字</a>	
+      </td>	
+      <td style="text-align: center;">	
         <p>0</p>	
       </td>	
   </tr>	
@@ -1135,7 +1145,7 @@
         <a href='group/help.md'>help</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>4</p>	
+        <p>5</p>	
       </td>	
   </tr>	
     	
@@ -1228,6 +1238,16 @@
       </td>	
       <td style="text-align: center;">	
         <p>1</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/二叉树/平衡二叉树.md'>平衡二叉树</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
       </td>	
   </tr>	
     	
