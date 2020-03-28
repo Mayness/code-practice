@@ -8,26 +8,48 @@
   </head>
   <body>
     <script>
-      var lengthOfLongestSubstring = function(s) {
-        let map = {};
-        let max = 0;
-        let left = 0;
-        let right = 0;
-        while (right < s.length) {
-          const item = s[right];
-          if (map[ item ] >= 0 && map[ item ] >= left) {
-            left = map[ item ] + 1;
-            map[ item ] = right;
-          } else {
-            map[ item ] = right;
-            max = Math.max(right - left + 1, max);
+      var minimumLengthEncoding = function(words) {
+        const set = new Set(words);
+        let treeMap = {};
+        let length = 0;
+        let num = 0;
+        for (let item of words) {
+          let itemTree = treeMap;
+          let repair = 0;
+          let flag = false;
+          let obj;
+          let currObj;
+          for (let i = item.length - 1; i >= 0; i--) {
+            const char = item[ i ];
+            if (flag) {
+              currObj[ char ] = {};
+              currObj = currObj[ char ];
+              continue;
+            }
+            if (itemTree[ char ]) {
+              itemTree = itemTree[ char ];
+              if (Object.keys(itemTree).length === 0) {
+                repair = item.length - i + 1;
+              }
+              obj = {};
+            } else {
+              currObj = {};
+              obj = currObj;
+              currObj[ char ] = {};
+              currObj = currObj[ char ];
+              flag = true;
+            }
           }
-          right++;
+          if (Object.keys(obj).length !==  0) {
+            length += (item.length - repair);
+            num++;
+          }
+          Object.assign(itemTree, obj);
         }
-        return max;
+        return length + num;
       };
-      console.log(lengthOfLongestSubstring("dvdf"));
-
+      // time#cme#
+      console.log(minimumLengthEncoding(["tiame", "came", "bell"]));
     </script>
   </body>
 </html>
