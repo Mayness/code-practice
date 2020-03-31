@@ -384,6 +384,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/排序/排序数组✏️.md'>排序数组✏️</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/排序/旋转图像.md'>旋转图像</a>	
       </td>	
       <td style="text-align: center;">	
@@ -929,6 +939,26 @@
   <tr>	
     <td style="width: 300px;">	
         <a href='group/Fragment/49.丑数.md'>49.丑数</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/51.数组中的逆序对.md'>51.数组中的逆序对</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Fragment/56-1.数组中数字出现的次数.md'>56-1.数组中数字出现的次数</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
