@@ -8,23 +8,28 @@
   </head>
   <body>
     <script>
-      var nthUglyNumber = function(n) {
-        if (n === 0 || n === 1) return n;
-        const mutiply = [ 1 ];
-        let x = 0;
-        let y = 0;
-        let z = 0;
-        for (let i = 1; i < n; i++) {
-          let minNumber = Math.min(mutiply[ x ] * 2, mutiply[ y ] * 3, mutiply[ z ] * 5);
-          mutiply[ i ] = minNumber;
-          if(mutiply[ x ] * 2 === minNumber) x++;
-          if(mutiply[ y ] * 3 === minNumber) y++;
-          if(mutiply[ z ] * 5 === minNumber) z++;
+      var reverseWords = function(s) {
+        let str = '';
+        for (let i = 0; i < s.length; ) {
+          if (s[i] === ' ') {
+            i++;
+            continue;
+          };
+          let currStr = '';
+          let j = i;
+          while (j < s.length) {
+            if (s[j] === ' ') break;
+            currStr += s[j];
+            j++;
+          }
+          i = j + 1;
+          currStr = str ? currStr + ' ' : currStr;
+          str = currStr + str;
         }
-        return mutiply[ n - 1 ];
+        return str;
       };
-      // time#cme#
-      console.log(nthUglyNumber(11));
+      // 10  1   5 = 3
+      console.log(reverseWords("a"));
     </script>
   </body>
 </html>
