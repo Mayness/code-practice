@@ -8,28 +8,31 @@
   </head>
   <body>
     <script>
-      var reverseWords = function(s) {
-        let str = '';
-        for (let i = 0; i < s.length; ) {
-          if (s[i] === ' ') {
-            i++;
-            continue;
-          };
-          let currStr = '';
-          let j = i;
-          while (j < s.length) {
-            if (s[j] === ' ') break;
-            currStr += s[j];
-            j++;
+      var strToInt = function(str) {
+        let res = '';
+        for (let item of str) {
+          if (!res) {
+            if (item === ' ') continue;
+            if (item === '-' || item === '+') {
+              res += item;
+              continue;
+            }
           }
-          i = j + 1;
-          currStr = str ? currStr + ' ' : currStr;
-          str = currStr + str;
+          if (/\d/.test(item)) {
+            res += item;
+          } else {
+            break;
+          }
         }
-        return str;
+        if (!res || res === '-' || res === '+') return 0;
+        if (res >= 2147483647) {
+          return 2147483647;
+        } else if (res <= -2147483648){
+          return -2147483648
+        }
+        return res[ 0 ] === '+' ? res.slice(1) : res;
       };
-      // 10  1   5 = 3
-      console.log(reverseWords("a"));
+      console.log(strToInt("+10"));
     </script>
   </body>
 </html>
