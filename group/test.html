@@ -8,31 +8,33 @@
   </head>
   <body>
     <script>
-      var strToInt = function(str) {
-        let res = '';
-        for (let item of str) {
-          if (!res) {
-            if (item === ' ') continue;
-            if (item === '-' || item === '+') {
-              res += item;
-              continue;
-            }
+      /**
+       * @param {number[]} nums
+       * @return {number}
+       */
+      // 
+      var maxProduct = function(nums) {
+        if (!nums.length) return 0;
+        let currMin = 1;
+        let currMax = 1;
+        let maxMulti = 0;
+        for (let item of nums) {
+          // if (item === 0) {
+          //   currMin = 1;
+          //   currMax = 1;
+          //   maxMulti = Math.max(maxMulti, 0);
+          //   continue;
+          // }
+          if (item < 0) {
+            [ currMin, currMax ] = [ currMax, currMin ]
           }
-          if (/\d/.test(item)) {
-            res += item;
-          } else {
-            break;
-          }
+          currMin = Math.min(currMin * item, item);
+          currMax = Math.max(currMax * item, item);
+          maxMulti = Math.max(currMax, maxMulti);
         }
-        if (!res || res === '-' || res === '+') return 0;
-        if (res >= 2147483647) {
-          return 2147483647;
-        } else if (res <= -2147483648){
-          return -2147483648
-        }
-        return res[ 0 ] === '+' ? res.slice(1) : res;
+        return maxMulti;
       };
-      console.log(strToInt("+10"));
+      console.log(maxProduct([-2,0,-1]));
     </script>
   </body>
 </html>
