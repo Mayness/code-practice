@@ -150,6 +150,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/回溯算法/乘积最大子数组.md'>乘积最大子数组</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/回溯算法/全排序.md'>全排序</a>	
       </td>	
       <td style="text-align: center;">	
@@ -991,7 +1001,7 @@
         <a href='group/Fragment/67.把字符串转换成整数.md'>67.把字符串转换成整数</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
