@@ -8,29 +8,29 @@
   </head>
   <body>
     <script>
-      var combinationSum3 = function(k, n) {
-        if (n === 0 || n > k * 9) return [];
-        const res = [];
-        const choose = Array.from({ length: 9 }, (item, index) => index + 1);
-        function dfs(sum, start, arr, time) {
-          if (time < 0) return true;
-          if (time === 0 && sum === n) {
-            res.push(arr);
-            return true;
+      var combinationSum4 = function(nums, target) {
+        const arr = nums.sort((a, b) => a - b);
+        if (target < arr[0]) return 0;
+        const dp = [];
+        for (i = arr[0]; i <= target; i++) {
+          let sum = 0;
+          for (let item of nums) {
+            if (item === i) {
+              sum++;
+            } else if (i - item > 0) {
+              sum += (dp[i - item] || 0);
+            } else {
+              break;
+            }
           }
-          if (sum > n) return true;
-          for (let i = start; i < 9; i++) {
-            const itemArr = arr.slice(0);
-            itemArr.push(choose[i]);
-            if (dfs(sum + choose[i], i + 1, itemArr, time - 1)) break;
-          }
+          dp[i] = sum;
         }
-        dfs(0, 0, [], k);
-        return res;
+        console.log(dp);
+        return dp[dp.length - 1] || 0;
       };
       // 1 1 4  5
       //
-      combinationSum2([1, 1, 4], 5);
+      combinationSum4([3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25], 10);
     </script>
   </body>
 </html>
