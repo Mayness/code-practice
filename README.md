@@ -16,16 +16,6 @@
     	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Array/动态规划/ 买卖股票系列.md'> 买卖股票系列</a>	
-      </td>	
-      <td style="text-align: center;">	
-        <p>0</p>	
-      </td>	
-  </tr>	
-    	
-  	
-  <tr>	
-    <td style="width: 300px;">	
         <a href='group/Array/动态规划/Longest Increasing Subsequence.md'>Longest Increasing Subsequence</a>	
       </td>	
       <td style="text-align: center;">	
@@ -60,6 +50,16 @@
       </td>	
       <td style="text-align: center;">	
         <p>1</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Array/动态规划/买卖股票系列.md'>买卖股票系列</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
       </td>	
   </tr>	
     	
