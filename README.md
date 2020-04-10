@@ -16,20 +16,10 @@
     	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Array/动态规划/ 买卖股票的最佳时机（单笔交易）.md'> 买卖股票的最佳时机（单笔交易）</a>	
+        <a href='group/Array/动态规划/ 买卖股票系列.md'> 买卖股票系列</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>3</p>	
-      </td>	
-  </tr>	
-    	
-  	
-  <tr>	
-    <td style="width: 300px;">	
-        <a href='group/Array/动态规划/ 买卖股票的最佳时机（多笔交易）.md'> 买卖股票的最佳时机（多笔交易）</a>	
-      </td>	
-      <td style="text-align: center;">	
-        <p>2</p>	
+        <p>0</p>	
       </td>	
   </tr>	
     	
