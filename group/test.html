@@ -8,29 +8,32 @@
   </head>
   <body>
     <script>
-      var findDisappearedNumbers = function(nums) {
-        const res = [];
-        for (let i = 0; i < nums.length; i++) {
-          const index = Math.abs(nums[ i ]) - 1;
-          if (nums[ index ] > 0) nums[index] = -nums[index];
+      var change = function(amount, coins) {
+        const dp = new Array(amount + 1).fill(0);
+        dp[ 0 ] = 1;
+        for (let coin of coins) {
+          for (let i = 1; i <= amount; i++) {
+            if (i >= coin) {
+              dp[ i ] += dp[ i - coin ];
+            }
+            console.log(dp);
+          }
         }
-        for (let i = 1; i <= nums.length; i++) {
-          if (nums[ i ] > 0) res.push(i);
-        }
-        return res;
+        console.log(dp);
+        return dp[ dp.length - 1 ];
       };
-      console.log(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1]));
-      /* 
-        0 今天不持股票
-          昨天卖了，今天没买
-          昨天买入，今天卖出
-        1 今天持有股票
-          昨天持有，今天不卖
-          前天卖出，今天买入
+      console.log(change(5, [1, 2, 5]));
+      /*
+                    0 今天不持股票
+                      昨天卖了，今天没买
+                      昨天买入，今天卖出
+                    1 今天持有股票
+                      昨天持有，今天不卖
+                      前天卖出，今天买入
 
-        0:  [0]
-        1:  [2]
-      */
+                    0:  [0]
+                    1:  [2]
+                  */
     </script>
   </body>
 </html>
