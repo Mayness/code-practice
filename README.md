@@ -662,6 +662,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/贪心算法/根据身高重建队列.md'>根据身高重建队列</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/贪心算法/跳跃游戏.md'>跳跃游戏</a>	
       </td>	
       <td style="text-align: center;">	
@@ -1001,7 +1011,7 @@
         <a href='group/Fragment/60.n个骰子的点数.md'>60.n个骰子的点数</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
