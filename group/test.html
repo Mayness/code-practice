@@ -8,32 +8,14 @@
   </head>
   <body>
     <script>
-      var change = function(amount, coins) {
-        const dp = new Array(amount + 1).fill(0);
-        dp[ 0 ] = 1;
-        for (let coin of coins) {
-          for (let i = 1; i <= amount; i++) {
-            if (i >= coin) {
-              dp[ i ] += dp[ i - coin ];
-            }
-            console.log(dp);
-          }
-        }
-        console.log(dp);
-        return dp[ dp.length - 1 ];
+      var reconstructQueue = function(people) {
+        const arr = people.sort((a, b)  => b[0] - a[0] || a[1] - b[1]);
+        return arr.reduce((total, item) => {
+          total.splice(item[ 1 ], 0, item);
+          return total;
+        }, [])
       };
-      console.log(change(5, [1, 2, 5]));
-      /*
-                    0 今天不持股票
-                      昨天卖了，今天没买
-                      昨天买入，今天卖出
-                    1 今天持有股票
-                      昨天持有，今天不卖
-                      前天卖出，今天买入
-
-                    0:  [0]
-                    1:  [2]
-                  */
+      console.log(reconstructQueue([[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]));
     </script>
   </body>
 </html>
