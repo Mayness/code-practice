@@ -508,6 +508,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/搜索/和为K的子数组.md'>和为K的子数组</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/搜索/和为s的连续正数序列.md'>和为s的连续正数序列</a>	
       </td>	
       <td style="text-align: center;">	
