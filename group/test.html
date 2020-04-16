@@ -8,14 +8,37 @@
   </head>
   <body>
     <script>
-      var reconstructQueue = function(people) {
-        const arr = people.sort((a, b)  => b[0] - a[0] || a[1] - b[1]);
-        return arr.reduce((total, item) => {
-          total.splice(item[ 1 ], 0, item);
-          return total;
-        }, [])
+      /*
+      [,75, 76]
+        根据每日 气温 列表，请重新生成一个列表，对应位置的输出是需要再等待多久温度才会升高超过该日的天数。
+        如果之后都不会升高，请在该位置用 0 来代替。
+
+        例如，给定一个列表 temperatures = [73, 74, 75, 71, 69, 72, 76, 73]，
+        你的输出应该是 [1, 1, 4, 2, 1, 1, 0, 0]。
+
+        提示：气温 列表长度的范围是 [1, 30000]。每个气温的值的均为华氏度，都是在 [30, 100] 范围内的整数。
+      */
+      // [[73,0], [74,1], [75,2], [71,3],[69,4],[72,5],[76,6],[73,7]]
+      var dailyTemperatures = function(T) {
+        const stack = [];
+        const res = [];
+        for (let i = T.length - 1; i >= 0; i--) {
+          let left = 0;
+          let right = stack.length - 1;
+          while(left <= right) {
+            const mid = (left + right) >>> 1;
+            if (stack[ mid ][ 0 ] > T[ i ]) {
+              right = mid - 1;
+            } else {
+              left = mid + 1;
+            }
+          }
+          stack.splice(0, left, [ T[ i ], i ]);
+          res[ i ] = stack[ 1 ] ? stack[ 1 ][ 1 ] - i : 0;
+        }
+        return res;
       };
-      console.log(reconstructQueue([[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]));
+      console.log(dailyTemperatures([89,62,70,58,47,47,46,76,100,70]));
     </script>
   </body>
 </html>
