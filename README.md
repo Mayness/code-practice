@@ -481,7 +481,7 @@
         <a href='group/Array/搜索/三数之和.md'>三数之和</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -685,7 +685,7 @@
         <a href='group/Array/贪心算法/跳跃游戏.md'>跳跃游戏</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>2</p>	
+        <p>3</p>	
       </td>	
   </tr>	
     	
@@ -821,7 +821,7 @@
         <a href='group/Fragment/19.正则表达式匹配.md'>19.正则表达式匹配</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
