@@ -8,57 +8,35 @@
   </head>
   <body>
     <script>
-      /*
-              给你一个字符串 S、一个字符串 T，请在字符串 S 里面找出：
-              包含 T 所有字母的最小子串。
-
-              示例：
-
-              输入: S = "ADOBECODEBANC", T = "ABC"
-              输出: "BANC"
-              说明：
-
-              如果 S 中不存这样的子串，则返回空字符串 ""。
-              如果 S 中存在这样的子串，我们保证它是唯一的答案。
-
-              [0, 10],
-              [3, 9],
-              [5, 12]
-
-            */
-      /**
-       * @param {number[]} nums
-       * @return {number}
-       */
-      var getHappyString = function(n, k) {
-        let sum = 3;
-        while (--n) {
-          sum *= 2;
-        }
-        if (sum < k) return '';
-        let res = '';
-        let pow = sum / 3;
-        let map = ['a', 'b', 'c'];
-        let arr = map.slice(0);
-        while (pow >= 1) {
-          let index = 1;
-          if (k >= 1) {
-            index = Math.floor((k - 1) / pow);
+      var numberOfArrays = function(s, k) {
+        const dp = new Array(s.length + 1).fill(0);
+        dp[ 0 ] = 1;
+        const validIdx = [ 0 ];
+        let lastValidIndex = null;
+        for (let i = 1; i <= s.length; i++) {
+          let sum = 0;
+          if (i >1 && s[ i ] === '0' && dp[ i - 1 ] === 0) {
+            dp[ i ] = 0;
+            continue;
           }
-          const char = arr[index];
-          res += char;
-          arr = map.slice(0);
-          arr.splice(map.indexOf(char), 1);
-          k %= pow;
-          pow /= 2;
+          for (let item of validIdx) {
+            const char = s.substring(item, i);
+            if (char >= 1 && char <= k) {
+              sum += (dp[ item ] % (Math.pow(10, 9) + 7));
+            } else {
+              console.log(111);
+              break;
+            }
+          }
+          dp[ i ] = sum % (Math.pow(10, 9) + 7);
+          if (s[ i ] !== '0') {
+            validIdx.unshift(i);
+          }
         }
-        return res;
+        return dp[ dp.length - 1 ];
       };
-      // abacbabacb
-      // abacbaba
-      console.log(getHappyString(3, 9));
-      // ADOBEC
-      // DOBEC BECODEBA
+      console.log(numberOfArrays('10', 2));
+      // 1
     </script>
   </body>
 </html>
