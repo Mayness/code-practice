@@ -86,6 +86,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/动态规划/恢复空格.md'>恢复空格</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/动态规划/打家劫舍.md'>打家劫舍</a>	
       </td>	
       <td style="text-align: center;">	
@@ -183,7 +193,7 @@
         <a href='group/Array/回溯算法/子集.md'>子集</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -761,7 +771,7 @@
         <a href='group/Fragment/11.旋转数组的最小数字.md'>11.旋转数组的最小数字</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
