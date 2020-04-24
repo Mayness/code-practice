@@ -8,35 +8,38 @@
   </head>
   <body>
     <script>
-      var numberOfArrays = function(s, k) {
-        const dp = new Array(s.length + 1).fill(0);
-        dp[ 0 ] = 1;
-        const validIdx = [ 0 ];
-        let lastValidIndex = null;
-        for (let i = 1; i <= s.length; i++) {
-          let sum = 0;
-          if (i >1 && s[ i ] === '0' && dp[ i - 1 ] === 0) {
-            dp[ i ] = 0;
-            continue;
+      /*
+        你有一个用于表示一片土地的整数矩阵land，该矩阵中每个点的值代表对应地点的海拔高度。若值为0则表示水域。
+        由垂直、水平或对角连接的水域为池塘。池塘的大小是指相连接的水域的个数。编写一个方法来计算矩阵中所有池塘的大小，返回值需要从小到大排序。
+
+        示例：
+
+        输入：
+        [
+          [0,2,1,0],
+          [0,1,0,1],
+          [1,1,0,1],
+          [0,1,0,1],
+        ]
+        输出： [1,2,4]
+      */
+      var permutation = function(S) {
+        const newArr = S.split('').sort();
+        const arr = [];
+        dfs(newArr, '');
+        return arr;
+        function dfs(itemArr, curr) {
+          if (curr.length === S.length) {
+            arr.push(curr);
+            return;
           }
-          for (let item of validIdx) {
-            const char = s.substring(item, i);
-            if (char >= 1 && char <= k) {
-              sum += (dp[ item ] % (Math.pow(10, 9) + 7));
-            } else {
-              console.log(111);
-              break;
-            }
-          }
-          dp[ i ] = sum % (Math.pow(10, 9) + 7);
-          if (s[ i ] !== '0') {
-            validIdx.unshift(i);
+          for (let i = 0; i < itemArr.length; i++) {
+            if (i > 0 && itemArr[i - 1] === itemArr[i]) continue;
+            dfs(itemArr.slice(0, i).concat(itemArr.slice(i + 1)), curr + itemArr[i]);
           }
         }
-        return dp[ dp.length - 1 ];
       };
-      console.log(numberOfArrays('10', 2));
-      // 1
+      permutation('aab');
     </script>
   </body>
 </html>
