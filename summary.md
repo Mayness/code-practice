@@ -19,6 +19,8 @@ Set
 左指针 和 右指针
 
 ### 动态规划
+博弈论
+
 #### 斐波那契数列
 ```
 fn(n) = fn(n-1) + fn(n-2);
@@ -44,7 +46,7 @@ fn(n) = fn(n-1) + fn(n-2);
 ![后序遍历](https://upload-images.jianshu.io/upload_images/2838289-40ce1a6b62a8dfc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/634/format/webp)
 
 #### 结构
-广度优先遍历：通过队列来实现，记录其每一层的index，循环中是push => shift => push => shift => ...  
+广度优先遍历：通过queue队列循环来实现，记录其每一层的index，循环中用temp来记录下一轮队列，进入下次循环前，用temp替换queue队列
 
 深度优先遍历：通过栈来实现。在压栈时，必须确保该节点的左右子树都为空，若不为空就需要将右子树压入栈，再压左子树。等左右子树压入之后，再将根节点压入栈。
 
@@ -67,3 +69,7 @@ AOP
 
 ## 图
 拓扑排序
+
+## 设计
+LFU（最不经常使用）：频率优先，先移除访问频率低的条目  
+LRU（最近最少使用算法）：时间新旧顺序优先，先移除最老时间的

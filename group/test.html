@@ -8,38 +8,42 @@
   </head>
   <body>
     <script>
-      /*
-        你有一个用于表示一片土地的整数矩阵land，该矩阵中每个点的值代表对应地点的海拔高度。若值为0则表示水域。
-        由垂直、水平或对角连接的水域为池塘。池塘的大小是指相连接的水域的个数。编写一个方法来计算矩阵中所有池塘的大小，返回值需要从小到大排序。
-
-        示例：
-
-        输入：
-        [
-          [0,2,1,0],
-          [0,1,0,1],
-          [1,1,0,1],
-          [0,1,0,1],
-        ]
-        输出： [1,2,4]
-      */
-      var permutation = function(S) {
-        const newArr = S.split('').sort();
-        const arr = [];
-        dfs(newArr, '');
-        return arr;
-        function dfs(itemArr, curr) {
-          if (curr.length === S.length) {
-            arr.push(curr);
-            return;
+      var maxScore = function(cardPoints, k) {
+        let dp = [0];
+        let left = 0;
+        let right = cardPoints.length - 1;
+        while (left < right && k) {
+          const last = dp.length - 1;
+          if (right - left <= 1) {
+            dp.push(dp[dp.length - 1] + Math.max(cardPoints[right], cardPoints[left]));
+            k--;
+            continue;
           }
-          for (let i = 0; i < itemArr.length; i++) {
-            if (i > 0 && itemArr[i - 1] === itemArr[i]) continue;
-            dfs(itemArr.slice(0, i).concat(itemArr.slice(i + 1)), curr + itemArr[i]);
+          if (cardPoints[left] > cardPoints[right]) {
+            if (dp[last - 1] + cardPoints[right] + cardPoints[right - 1] > dp[last] + cardPoints[left]) {
+              dp.push(dp[last - 1] + cardPoints[right] + cardPoints[right - 1]);
+              right -= 2;
+              left--;
+            } else {
+              dp.push(dp[last] + cardPoints[left]);
+              left++;
+            }
+          } else {
+            if (dp[last - 1] + cardPoints[left] + cardPoints[left + 1] > dp[last] + cardPoints[right]) {
+              dp.push(dp[last - 1] + cardPoints[left] + cardPoints[left + 1]);
+              left += 2;
+              right++;
+            } else {
+              dp.push(dp[last] + cardPoints[right]);
+              right--;
+            }
           }
+          k--;
         }
+        return dp[dp.length - 1];
       };
-      permutation('aab');
+
+      console.log(maxScore([11,49,100,20,86,29,72], 4));
     </script>
   </body>
 </html>
