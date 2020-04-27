@@ -518,6 +518,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/搜索/可获得的最大点数.md'>可获得的最大点数</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/搜索/和为K的子数组.md'>和为K的子数组</a>	
       </td>	
       <td style="text-align: center;">	
@@ -981,7 +991,7 @@
         <a href='group/Fragment/43.1～n整数中1出现的次数.md'>43.1～n整数中1出现的次数</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
