@@ -26,20 +26,10 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Array/动态规划/不同路径 II.md'>不同路径 II</a>	
+        <a href='group/Array/动态规划/不同路径系列.md'>不同路径系列</a>	
       </td>	
       <td style="text-align: center;">	
         <p>0</p>	
-      </td>	
-  </tr>	
-    	
-  	
-  <tr>	
-    <td style="width: 300px;">	
-        <a href='group/Array/动态规划/不同路径.md'>不同路径</a>	
-      </td>	
-      <td style="text-align: center;">	
-        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -110,6 +100,16 @@
       </td>	
       <td style="text-align: center;">	
         <p>1</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Array/动态规划/石子游戏.md'>石子游戏</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
       </td>	
   </tr>	
     	
@@ -562,6 +562,16 @@
       </td>	
       <td style="text-align: center;">	
         <p>1</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/Array/搜索/对角线遍历 II.md'>对角线遍历 II</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
       </td>	
   </tr>	
     	
