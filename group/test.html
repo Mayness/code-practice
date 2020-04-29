@@ -8,42 +8,28 @@
   </head>
   <body>
     <script>
-      var maxScore = function(cardPoints, k) {
-        let dp = [0];
-        let left = 0;
-        let right = cardPoints.length - 1;
-        while (left < right && k) {
-          const last = dp.length - 1;
-          if (right - left <= 1) {
-            dp.push(dp[dp.length - 1] + Math.max(cardPoints[right], cardPoints[left]));
-            k--;
-            continue;
+      var stoneGameIII = function(stoneValue) {
+        let sum = 0;
+        let dp = [];
+        for (let i = stoneValue.length - 1; i >= 0; i--) {
+          dp[i] = Number.MIN_SAFE_INTEGER;
+          sum += stoneValue[i];
+          for (let j = 1; j <= 3; j++) {
+            dp[i] = Math.max(dp[i], sum - ~~dp[i + j]);
           }
-          if (cardPoints[left] > cardPoints[right]) {
-            if (dp[last - 1] + cardPoints[right] + cardPoints[right - 1] > dp[last] + cardPoints[left]) {
-              dp.push(dp[last - 1] + cardPoints[right] + cardPoints[right - 1]);
-              right -= 2;
-              left--;
-            } else {
-              dp.push(dp[last] + cardPoints[left]);
-              left++;
-            }
-          } else {
-            if (dp[last - 1] + cardPoints[left] + cardPoints[left + 1] > dp[last] + cardPoints[right]) {
-              dp.push(dp[last - 1] + cardPoints[left] + cardPoints[left + 1]);
-              left += 2;
-              right++;
-            } else {
-              dp.push(dp[last] + cardPoints[right]);
-              right--;
-            }
-          }
-          k--;
         }
-        return dp[dp.length - 1];
+        console.log(dp);
+        let Bob = sum - dp[0];
+        if (dp[0] > Bob) {
+          return 'Alice';
+        } else if (dp[0] < Bob) {
+          return 'Bob';
+        } else {
+          return 'Tie';
+        }
       };
 
-      console.log(maxScore([11,49,100,20,86,29,72], 4));
+      console.log(stoneGameIII([1,2,3,7]));
     </script>
   </body>
 </html>
