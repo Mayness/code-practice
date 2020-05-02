@@ -313,7 +313,7 @@
         <a href='group/Array/回溯算法/重复字符的最长子串.md'>重复字符的最长子串</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
