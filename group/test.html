@@ -8,25 +8,7 @@
   </head>
   <body>
     <script>
-      var lengthOfLongestSubstring = function(s) {
-        let map = new Map();
-        let leftIndex = -1;
-        let max = 0;
-        for (let i = 0; i < s.length; i++) {
-          const char = s[i];
-          let idx = map.get(char);
-          if (idx === undefined || idx < leftIndex) {
-            max = Math.max(i - leftIndex, max);
-            map.set(char, i);
-          } else if (idx > leftIndex) {
-            map.set(char, i);
-            leftIndex = idx;
-          }
-        }
-        return max;
-      };
 
-      console.log(lengthOfLongestSubstring("abcabcbb"));
     </script>
   </body>
 </html>
