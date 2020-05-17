@@ -8,7 +8,35 @@
   </head>
   <body>
     <script>
-
+      var findOrder = function(numCourses, prerequisites) {
+        const outDegree = Array.from({ length: numCourses }, () => 0);
+        let adjMap = new Map();
+        let res = [];
+        for (let [ curr, prev ] of prerequisites) {
+          adjMap.set(prev, adjMap.has(prev) ? adjMap.get(prev).add(curr) : new Set([ curr ]));
+          outDegree[ curr ] += 1;
+        }
+        let queue = [];
+        for (let i = 0; i < outDegree.length; i++) {
+          if (outDegree[ i ] === 0) queue.push(i);
+        }
+        while(queue.length) {
+          const temp = [];
+          let prev = queue.shift();
+          res.push(prev);
+          if (adjMap.has(prev)) {
+            const set = adjMap.get(prev);
+            for (let item of set) {
+              outDegree[ item ]--;
+              if (outDegree[ item ] === 0) {
+                queue.push(item);
+              }
+            }
+          }
+        }
+        return res.length < outDegree.length ? [] : res;
+      };
+      console.log(findOrder(2, [[0,1],[1,0]]));
     </script>
   </body>
 </html>
