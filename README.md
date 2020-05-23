@@ -751,7 +751,7 @@
         <a href='group/Fragment/3.数组中重复的数字.md'>3.数组中重复的数字</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -761,7 +761,7 @@
         <a href='group/Fragment/4.二维数组中的查找.md'>4.二维数组中的查找</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -1290,6 +1290,26 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/String/最小覆盖子串.md'>最小覆盖子串</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/String/最长回文子串.md'>最长回文子串</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/String/有效字母的异位词.md'>有效字母的异位词</a>	
       </td>	
       <td style="text-align: center;">	
@@ -1407,7 +1427,7 @@
         <a href='group/二叉树/从前序与中序遍历序列构造二叉树.md'>从前序与中序遍历序列构造二叉树</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
