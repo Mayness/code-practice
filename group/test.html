@@ -8,42 +8,27 @@
   </head>
   <body>
     <script>
-      var minWindow = function(s, t) {
-        if (!t.length) return '';
-        const map = {};
-        for (let item of t) {
-          map[item] = (map[item] || 0) + 1;
+      var subarraysDivByK = function(A, K) {
+        const sumArr = [];
+        for (let i = 0; i < A.length; i++) {
+          sumArr[i] = ~~sumArr[i - 1] + A[i];
         }
-        let left = 0;
-        let right = 0;
-        let minDiffArr = [0, Number.MAX_SAFE_INTEGER];
-        let flag = false;
-        while (right < s.length) {
-          const rightChar = s[right];
-          if (map[rightChar] !== undefined) {
-            map[rightChar]--;
-          }
-          if (check(map) || flag) {
-            let flag = true;
-            while (left < right && (map[s[left]] === undefined || map[s[left]] < 0)) {
-              if (map[s[left]] !== undefined) map[s[left]]++;
-              left++;
+        const mod = [-5, 0, 5];
+        const map = new Map([[0, 1]]);
+        let res = 0;
+        for (let i = 0; i < sumArr.length; i++) {
+          const val = sumArr[i] % 5;
+          for (let item of mod) {
+            const need = item + val;
+            if (map.has(need)) {
+              res += map.get(need);
             }
-            minDiffArr = minDiffArr[1] - minDiffArr[0] > right - left ? [left, right] : minDiffArr;
           }
-          right++;
+          map.set(val, ~~map.get(val) + 1);
         }
-        return minDiffArr[1] - minDiffArr[0] === Number.MAX_SAFE_INTEGER ? '' : s.substring(minDiffArr[ 0 ], minDiffArr[ 1 ] + 1);
+        return res;
       };
-
-      function check(map) {
-        for (let i in map) {
-          if (map[i] > 0) return false;
-        }
-        return true;
-      }
-
-      console.log(minWindow("ab", "b"));
+      console.log(subarraysDivByK([4,5,0,-2,-3,1], 5));
     </script>
   </body>
 </html>
