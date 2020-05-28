@@ -841,7 +841,7 @@
         <a href='group/Fragment/14-1.剪绳子.md'>14-1.剪绳子</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
