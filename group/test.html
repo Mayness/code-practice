@@ -8,27 +8,33 @@
   </head>
   <body>
     <script>
-      var subarraysDivByK = function(A, K) {
-        const sumArr = [];
-        for (let i = 0; i < A.length; i++) {
-          sumArr[i] = ~~sumArr[i - 1] + A[i];
-        }
-        const mod = [-5, 0, 5];
-        const map = new Map([[0, 1]]);
-        let res = 0;
-        for (let i = 0; i < sumArr.length; i++) {
-          const val = sumArr[i] % 5;
-          for (let item of mod) {
-            const need = item + val;
-            if (map.has(need)) {
-              res += map.get(need);
+      var decodeString = function(s) {
+        let index = 0;
+        return helper();
+        function helper() {
+          let num = 0;
+          let str = '';
+          while(index < s.length) {
+            const item = s[ index ];
+            if (/^[0-9]/.test(item)) {
+              index++;
+              num += parseInt(item);
+            } else if (item === '[') {
+              index++;
+              str += helper().repeat(num);
+              num = 0;
+            } else if (item === ']') {
+              index++;
+              break;
+            } else {
+              index++;
+              str += item;
             }
           }
-          map.set(val, ~~map.get(val) + 1);
+          return str;
         }
-        return res;
       };
-      console.log(subarraysDivByK([4,5,0,-2,-3,1], 5));
+      console.log(decodeString('2[abc]3[cd]ef'));
     </script>
   </body>
 </html>
