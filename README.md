@@ -971,7 +971,7 @@
         <a href='group/Fragment/33.二叉搜索树的后序遍历序列.md'>33.二叉搜索树的后序遍历序列</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
