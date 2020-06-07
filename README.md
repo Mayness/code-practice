@@ -1008,6 +1008,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Fragment/38. 字符串的排列.md'>38. 字符串的排列</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Fragment/39.数组中出现次数超过一半的数字.md'>39.数组中出现次数超过一半的数字</a>	
       </td>	
       <td style="text-align: center;">	
