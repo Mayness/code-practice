@@ -1021,7 +1021,7 @@
         <a href='group/Fragment/39.数组中出现次数超过一半的数字.md'>39.数组中出现次数超过一半的数字</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
