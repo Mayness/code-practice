@@ -8,20 +8,39 @@
   </head>
   <body>
     <script>
-      var verifyPostorder = function(postorder) {
-        if (postorder.length <= 2) return true;
-        const val = postorder.pop();
-        let index = -1;
-        for (let i = postorder.length - 1; i >= 0; i--) {
-          if (index === -1 && postorder[i] < val) {
-            index = i;
+      var equationsPossible = function(equations) {
+        const unionfind = {};
+        for (const [c1, c2, c3, c4] of equations) {
+          if (c2 === '=') {
+            union(c1, c4);
           }
-          if (index !== -1 && postorder[i] > val) return false;
         }
-        return verifyPostorder(postorder.slice(0, index + 1)) && verifyPostorder(postorder.slice(index + 1));
+
+        for (const [c1, c2, c3, c4] of equations) {
+          if (c2 === '!') {
+            const x = find(c1);
+            const y = find(c4);
+            if (x === y) {
+              return false;
+            }
+          }
+        }
+        return true;
+
+        function find(i) {
+          if (unionfind[i] === undefined) {
+            return (unionfind[i] = i);
+          }
+          return unionfind[i] === i ? i : (unionfind[i] = find(unionfind[i]));
+        }
+
+        function union(x, y) {
+          x = find(x);
+          y = find(y);
+          unionfind[y] = x;
+        }
       };
-      console.log(verifyPostorder([5, 2, -17, -11, 25, 76, 62, 98, 92, 61]))
-      
+      console.log(equationsPossible(["a==b","b==c", "a!=c"]));
     </script>
   </body>
 </html>
