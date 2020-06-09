@@ -8,39 +8,26 @@
   </head>
   <body>
     <script>
-      var equationsPossible = function(equations) {
-        const unionfind = {};
-        for (const [c1, c2, c3, c4] of equations) {
-          if (c2 === '=') {
-            union(c1, c4);
+      var translateNum = function(num) {
+        const str = String(num);
+        if (!str.length) return 0;
+        let prevprev = 1;
+        if (str.length === 1) return prevprev;
+        let prev = str[0] < 2 || (str[0] === '2' && str[1] <= 5) ? 2 : 1;
+        for (let i = 2; i < str.length; i++) {
+          if ((str[i - 1] !== '0' && str[i - 1] < 2) || (str[i - 1] === '2' && str[i] <= 5)) {
+            [prev, prevprev] = [prevprev + prev, prev];
+          } else {
+            prevprev = prev;
           }
         }
-
-        for (const [c1, c2, c3, c4] of equations) {
-          if (c2 === '!') {
-            const x = find(c1);
-            const y = find(c4);
-            if (x === y) {
-              return false;
-            }
-          }
-        }
-        return true;
-
-        function find(i) {
-          if (unionfind[i] === undefined) {
-            return (unionfind[i] = i);
-          }
-          return unionfind[i] === i ? i : (unionfind[i] = find(unionfind[i]));
-        }
-
-        function union(x, y) {
-          x = find(x);
-          y = find(y);
-          unionfind[y] = x;
-        }
+        return prev;
       };
-      console.log(equationsPossible(["a==b","b==c", "a!=c"]));
+      console.log(translateNum(18822));
+      '18822'
+      '1'
+      '18'
+      '188'  
     </script>
   </body>
 </html>
