@@ -8,14 +8,16 @@
   </head>
   <body>
     <script>
-       let arr = new Array(3).fill({});
-       for (let i = 0; i < 3; i++) {
-         (function(i) {
-           arr[ i ].color = i;
-           console.log(arr[ i ]);
-         }(i))
-       }
-       console.log(arr);
+      const arr = [1,2]
+      Object.defineProperty(arr, 'length', {
+        get() {
+          console.log(11);
+        },
+        set(val) {
+          console.log(val);
+        }
+      })
+      arr[ 0 ] = 2;
     </script>
   </body>
 </html>
