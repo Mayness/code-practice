@@ -1108,6 +1108,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Fragment/57 - II.和为s的连续正数序列.md'>57 - II.和为s的连续正数序列</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Fragment/60.n个骰子的点数.md'>60.n个骰子的点数</a>	
       </td>	
       <td style="text-align: center;">	
