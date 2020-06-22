@@ -1118,6 +1118,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Fragment/59 - I.滑动窗口的最大值.md'>59 - I.滑动窗口的最大值</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Fragment/60.n个骰子的点数.md'>60.n个骰子的点数</a>	
       </td>	
       <td style="text-align: center;">	
