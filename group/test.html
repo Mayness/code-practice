@@ -8,16 +8,37 @@
   </head>
   <body>
     <script>
-      const arr = [1,2]
-      Object.defineProperty(arr, 'length', {
-        get() {
-          console.log(11);
-        },
-        set(val) {
-          console.log(val);
+      var maxSlidingWindow = function(nums, k) {
+        const res = [];
+        const bigArr = [];
+        for (let i = 0; i < nums.length; i++) {
+          if (i >= k && nums[i - k] === bigArr[ 0 ]) {
+            bigArr.shift();
+          }
+          compareArr(nums[i]);
+          if (i >= k - 1) {
+            res.push(bigArr[0]);
+          }
         }
-      })
-      arr[ 0 ] = 2;
+        return res;
+        function compareArr(num) {
+          let left = 0;
+          let right = bigArr.length - 1;
+          while (left <= right) {
+            const mid = (left + right) >> 1;
+            if (bigArr[mid] > num) {
+              left = mid + 1;
+            } else if (bigArr[mid] < num) {
+              right = mid - 1;
+            } else {
+              left = mid + 1;
+            }
+          }
+          if (left >= k) return;
+          bigArr.splice(left, bigArr.length - left, num);
+        }
+      };
+      console.log(maxSlidingWindow([1],1));
     </script>
   </body>
 </html>
