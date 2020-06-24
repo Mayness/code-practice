@@ -1138,6 +1138,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Fragment/61. 扑克牌中的顺子.md'>61. 扑克牌中的顺子</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Fragment/66.构建乘积数组.md'>66.构建乘积数组</a>	
       </td>	
       <td style="text-align: center;">	
