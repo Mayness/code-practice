@@ -791,7 +791,7 @@
         <a href='group/Fragment/7.重建二叉树.md'>7.重建二叉树</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -821,7 +821,7 @@
         <a href='group/Fragment/12.矩阵中的路径.md'>12.矩阵中的路径</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
