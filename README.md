@@ -732,6 +732,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/贪心算法/检查数组对是否可以被 k 整除.md'>检查数组对是否可以被 k 整除</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/贪心算法/跳跃游戏.md'>跳跃游戏</a>	
       </td>	
       <td style="text-align: center;">	
