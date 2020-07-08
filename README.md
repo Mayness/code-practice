@@ -848,10 +848,10 @@
   	
   <tr>	
     <td style="width: 300px;">	
-        <a href='group/Fragment/14-1.剪绳子.md'>14-1.剪绳子</a>	
+        <a href='group/Fragment/14.剪绳子.md'>14.剪绳子</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>0</p>	
       </td>	
   </tr>	
     	
@@ -861,7 +861,7 @@
         <a href='group/Fragment/15.二进制中1的个数.md'>15.二进制中1的个数</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -871,7 +871,7 @@
         <a href='group/Fragment/16.数值的整数次方.md'>16.数值的整数次方</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -881,7 +881,7 @@
         <a href='group/Fragment/19.正则表达式匹配.md'>19.正则表达式匹配</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>3</p>	
+        <p>4</p>	
       </td>	
   </tr>	
     	
@@ -1472,6 +1472,16 @@
   </thead>	
   <tbody>	
     	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/二叉树/ 路径总和.md'> 路径总和</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
   <tr>	
     <td style="width: 300px;">	
         <a href='group/二叉树/不同的二叉搜索树.md'>不同的二叉搜索树</a>	
