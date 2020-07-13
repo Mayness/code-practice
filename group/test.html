@@ -8,18 +8,43 @@
   </head>
   <body>
     <script>
-      var maxProfit = function(prices) {
-        const price_no = [0];
-        const price_has = [-prices[0]];
-        for (let i = 1; i < prices.length; i++) {
-          price_no[i] = Math.max(price_no[i - 1], price_has[i - 1] + prices[i]);
-          price_has[i] = Math.max(price_has[i - 1], price_no[i - 1] - prices[i]);
+      var countSmaller = function(nums) {
+        const arr = Array.from({ length: nums.length }, (_, index) => index);
+        const res = new Array(nums.length).fill(0);
+        merge(arr);
+        return res;
+        function merge(arr) {
+          if (arr.length < 2) return arr;
+          const mid = arr.length >> 1;
+          const left = arr.slice(0, mid);
+          const right = arr.slice(mid);
+          return mergeSort(merge(left), merge(right));
         }
-        console.log(price_no);
-        console.log(price_has);
-        return price_no[price_no.length - 1];
+        function mergeSort(left, right) {
+          let newArr = [];
+          let leftIdx = 0;
+          let rightIdx = 0;
+          while(leftIdx < left.length && rightIdx < right.length) {
+            const leftVal = nums[ left[ leftIdx ] ]
+            const rightVal = nums[ right[ rightIdx ] ]
+            if (leftVal > rightVal) {
+              res[ left[ leftIdx ] ] += (right.length - rightIdx);
+              newArr.push(left[ leftIdx ]);
+              leftIdx++;
+            } else {
+              newArr.push(right[ rightIdx ]);
+              rightIdx++;
+            }
+          }
+          if (leftIdx < left.length) {
+            newArr = newArr.concat(left.slice(leftIdx));
+          } else {
+            newArr = newArr.concat(right.slice(rightIdx));
+          }
+          return newArr;
+        }
       };
-      console.log(maxProfit([1,2,3,0,2]));
+      console.log(countSmaller([5,5,2,2]));
     </script>
   </body>
 </html>
