@@ -454,6 +454,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/排序/计算右侧小于当前元素的个数.md'>计算右侧小于当前元素的个数</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/排序/颜色分类✏️.md'>颜色分类✏️</a>	
       </td>	
       <td style="text-align: center;">	
@@ -931,7 +941,7 @@
         <a href='group/Fragment/29.顺时针打印矩阵.md'>29.顺时针打印矩阵</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -941,7 +951,7 @@
         <a href='group/Fragment/30.包含min函数的栈.md'>30.包含min函数的栈</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
