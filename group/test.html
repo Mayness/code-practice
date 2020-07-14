@@ -8,43 +8,48 @@
   </head>
   <body>
     <script>
-      var countSmaller = function(nums) {
-        const arr = Array.from({ length: nums.length }, (_, index) => index);
-        const res = new Array(nums.length).fill(0);
-        merge(arr);
-        return res;
-        function merge(arr) {
-          if (arr.length < 2) return arr;
-          const mid = arr.length >> 1;
-          const left = arr.slice(0, mid);
-          const right = arr.slice(mid);
-          return mergeSort(merge(left), merge(right));
-        }
-        function mergeSort(left, right) {
-          let newArr = [];
-          let leftIdx = 0;
-          let rightIdx = 0;
-          while(leftIdx < left.length && rightIdx < right.length) {
-            const leftVal = nums[ left[ leftIdx ] ]
-            const rightVal = nums[ right[ rightIdx ] ]
-            if (leftVal > rightVal) {
-              res[ left[ leftIdx ] ] += (right.length - rightIdx);
-              newArr.push(left[ leftIdx ]);
-              leftIdx++;
-            } else {
-              newArr.push(right[ rightIdx ]);
-              rightIdx++;
+      var spiralOrder = function(matrix) {
+        let i = 0;
+        let j = -1;
+        let top = 0;
+        let bottom = matrix.length - 1;
+        if (bottom < 0) return [];
+        let left = 0;
+        let right = matrix[0].length - 1;
+        if (right < 0) return [];
+        let type = 'toRight';
+        const res = [];
+        while (top <= bottom && left <= right) {
+          if (type === 'toRight') {
+            j++;
+            if (j === right) {
+              type = 'toBottom';
+              top++;
+            }
+          } else if (type === 'toBottom') {
+            i++;
+            if (i === bottom) {
+              type = 'toLeft';
+              right--;
+            }
+          } else if (type === 'toLeft') {
+            j--;
+            if (j === left) {
+              type = 'toTop';
+              bottom--;
+            }
+          } else if (type === 'toTop') {
+            i--;
+            if (i === top) {
+              type = 'toRight';
+              left++;
             }
           }
-          if (leftIdx < left.length) {
-            newArr = newArr.concat(left.slice(leftIdx));
-          } else {
-            newArr = newArr.concat(right.slice(rightIdx));
-          }
-          return newArr;
+          res.push(matrix[i][j]);
         }
+        return res;
       };
-      console.log(countSmaller([5,5,2,2]));
+      console.log(spiralOrder([[1]]));
     </script>
   </body>
 </html>
