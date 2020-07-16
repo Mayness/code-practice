@@ -8,48 +8,21 @@
   </head>
   <body>
     <script>
-      var spiralOrder = function(matrix) {
-        let i = 0;
-        let j = -1;
-        let top = 0;
-        let bottom = matrix.length - 1;
-        if (bottom < 0) return [];
-        let left = 0;
-        let right = matrix[0].length - 1;
-        if (right < 0) return [];
-        let type = 'toRight';
-        const res = [];
-        while (top <= bottom && left <= right) {
-          if (type === 'toRight') {
-            j++;
-            if (j === right) {
-              type = 'toBottom';
-              top++;
-            }
-          } else if (type === 'toBottom') {
-            i++;
-            if (i === bottom) {
-              type = 'toLeft';
-              right--;
-            }
-          } else if (type === 'toLeft') {
-            j--;
-            if (j === left) {
-              type = 'toTop';
-              bottom--;
-            }
-          } else if (type === 'toTop') {
-            i--;
-            if (i === top) {
-              type = 'toRight';
-              left++;
-            }
+      var verifyPostorder = function(postorder) {
+        return helper(0, postorder.length - 1);
+        function helper(left, right) {
+          if (right - left <= 2) return true;
+          const root = postorder[right];
+          let index = left - 1;
+          for (let i = right - 1; i >= left; i--) {
+            if (index === left - 1 && postorder[i] < root) index = i;
+            if (index !== left - 1 && postorder[i] >= root) return false;
           }
-          res.push(matrix[i][j]);
+          console.log(left, right, index);
+          return helper(left, index) && helper(index, right - 1);
         }
-        return res;
       };
-      console.log(spiralOrder([[1]]));
+      verifyPostorder([4, 8, 6, 12, 16, 14, 10]);
     </script>
   </body>
 </html>
