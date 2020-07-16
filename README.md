@@ -961,7 +961,7 @@
         <a href='group/Fragment/31.栈的压入、弹出序列.md'>31.栈的压入、弹出序列</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -971,7 +971,7 @@
         <a href='group/Fragment/32-1.从上到下打印二叉树.md'>32-1.从上到下打印二叉树</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -981,7 +981,7 @@
         <a href='group/Fragment/32-2.从上到下打印二叉树 II.md'>32-2.从上到下打印二叉树 II</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -1497,7 +1497,7 @@
         <a href='group/二叉树/不同的二叉搜索树.md'>不同的二叉搜索树</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -1621,7 +1621,7 @@
         <a href='group/图/三角形最小路径和.md'>三角形最小路径和</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>2</p>	
+        <p>3</p>	
       </td>	
   </tr>	
     	
