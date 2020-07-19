@@ -1,6 +1,1 @@
- 1
-  \
-   2
- 2
-/
-1
+dp[ i ][ j ] = dp[ i ][ k ] + dp[ k ][ j ] + nums[ k - 1 ] * nums[ k ] * nums[ k + 1 ];
