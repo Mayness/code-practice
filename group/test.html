@@ -8,36 +8,64 @@
   </head>
   <body>
     <script>
-      var maxCoins = function(nums) {
-        let n = nums.length;
-        let dp = new Array(n + 2).fill(0);
-        for (let i = 0; i < n + 2; i++) {
-          dp[i] = new Array(n + 2).fill(0);
-        }
-        let val = new Array(n + 2).fill(0);
-        // 添加首尾虚拟气球
-        val[0] = val[n + 1] = 1;
-        // 气球编号赋值为数组
-        for (let i = 1; i <= n; i++) {
-          val[i] = nums[i - 1];
-        }
-        // 二维数组 dp[i][j]从底向上遍历
-        for (let i = n; i >= 0; i--) {
-          for (let j = i + 2; j < n + 2; j++) {
-            // 假设最后被戳破的气球是k k应该在i,j之间
-            for (let k = i + 1; k < j; k++) {
-              dp[i][j] = Math.max(
-                dp[i][j],
-                // 子问题就是开区间(i, k) (k, j)
-                dp[i][k] + dp[k][j] + val[i] * val[j] * val[k]
-              );
-            }
+      var spiralOrder = function(matrix) {
+        if (!matrix.length || !matrix[0].length) return [];
+        let left = 0;
+        let right = matrix[0].length - 1;
+        let top = 0;
+        let bottom = matrix.length - 1;
+        let x = 0;
+        let y = -1;
+        let dirction = 'toRight';
+        const res = [];
+        while (left <= right && top <= bottom) {
+          switch (dirction) {
+            case 'toRight':
+              {
+                y++;
+                if (y === right) {
+                  dirction = 'toBottom';
+                  top++;
+                }
+              }
+              break;
+            case 'toBottom':
+              {
+                x++;
+                if (x === bottom) {
+                  dirction = 'toLeft';
+                  right--;
+                }
+              }
+              break;
+            case 'toLeft':
+              {
+                y--;
+                if (y === left) {
+                  dirction = 'toTop';
+                  bottom--;
+                }
+              }
+              break;
+            case 'toTop':
+              {
+                x--;
+                if (x === top) {
+                  dirction = 'toRight';
+                  left++;
+                }
+              }
+              break;
           }
+          res.push(matrix[x][y]);
         }
-        // 最终状态只剩添加的两个虚拟气球
-        return dp[0][n + 1];
+        return res;
       };
-      console.log(maxCoins([3, 1, 5, 8]));
+      console.log(spiralOrder([
+        [1,2,3,4],
+        [5,6,7,8],
+        [9,10,11,12]
+      ]));
     </script>
   </body>
 </html>
