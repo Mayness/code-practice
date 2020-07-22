@@ -1071,7 +1071,7 @@
         <a href='group/Fragment/44.数字序列中某一位的数字.md'>44.数字序列中某一位的数字</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -1497,7 +1497,7 @@
         <a href='group/二叉树/不同的二叉搜索树.md'>不同的二叉搜索树</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>2</p>	
+        <p>3</p>	
       </td>	
   </tr>	
     	
