@@ -8,64 +8,28 @@
   </head>
   <body>
     <script>
-      var spiralOrder = function(matrix) {
-        if (!matrix.length || !matrix[0].length) return [];
-        let left = 0;
-        let right = matrix[0].length - 1;
-        let top = 0;
-        let bottom = matrix.length - 1;
-        let x = 0;
-        let y = -1;
-        let dirction = 'toRight';
-        const res = [];
-        while (left <= right && top <= bottom) {
-          switch (dirction) {
-            case 'toRight':
-              {
-                y++;
-                if (y === right) {
-                  dirction = 'toBottom';
-                  top++;
-                }
-              }
-              break;
-            case 'toBottom':
-              {
-                x++;
-                if (x === bottom) {
-                  dirction = 'toLeft';
-                  right--;
-                }
-              }
-              break;
-            case 'toLeft':
-              {
-                y--;
-                if (y === left) {
-                  dirction = 'toTop';
-                  bottom--;
-                }
-              }
-              break;
-            case 'toTop':
-              {
-                x--;
-                if (x === top) {
-                  dirction = 'toRight';
-                  left++;
-                }
-              }
-              break;
+      var lengthOfLongestSubstring = function(s) {
+        let len = 0;
+        const map = new Map();
+        let min = 0;
+        for (let i = 0; i < s.length; i++) {
+          let flag = true;
+          const char = s[i];
+          const index = map.get(char);
+          if (index !== undefined) {
+            map.set(char, i);
+            if (index >= min) {
+              min = index + 1;
+              flag = false;
+            }
+          } else {
+            map.set(char, i);
           }
-          res.push(matrix[x][y]);
+          if (flag) len = Math.max(len, i - min + 1);
         }
-        return res;
+        return len;
       };
-      console.log(spiralOrder([
-        [1,2,3,4],
-        [5,6,7,8],
-        [9,10,11,12]
-      ]));
+      console.log(lengthOfLongestSubstring("aabaab!bb"));
     </script>
   </body>
 </html>
