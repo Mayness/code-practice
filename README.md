@@ -1091,7 +1091,7 @@
         <a href='group/Fragment/46.把数字翻译成字符串.md'>46.把数字翻译成字符串</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
