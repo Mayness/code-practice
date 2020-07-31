@@ -1131,7 +1131,7 @@
         <a href='group/Fragment/56-1.数组中数字出现的次数.md'>56-1.数组中数字出现的次数</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
