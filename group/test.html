@@ -8,37 +8,41 @@
   </head>
   <body>
     <script>
-      var search = function(nums, target) {
-        let left = 0;
-        let right = nums.length - 1;
-        let leftFlag;
-        let rightFlag = right;
-        while (left <= right) {
-          const mid = (left + right) >> 1;
-          if (nums[mid] > target) {
-            right = mid - 1;
-            rightFlag = right;
-          } else if (nums[mid] < target) {
-            left = mid + 1;
-          } else {
-            if (leftFlag === undefined) leftFlag = mid;
-            right = mid - 1;
+      var closedIsland = function(grid) {
+        if (!grid.length || !grid[ 0 ].length) return 0;
+        const rows = grid.length;
+        const cols = grid[ 0 ].length;
+        let res = 0;
+        for (let i = 0; i < rows; i++) {
+          for (let j = 0; j < cols; j++) {
+            if (i === 1 && j === 3) {
+                console.log(i, j);
+              if (grid[ i ][ j ] === 0 && dfs(i, j)) {
+                res++;
+              }
+            }
+            
           }
         }
-        if (leftFlag === undefined) return 0;
-        while (leftFlag <= rightFlag) {
-          const mid = (leftFlag + rightFlag) >> 1;
-          if (nums[mid] > target) {
-            rightFlag = mid - 1;
-          } else if (nums[mid] < target) {
-            leftFlag = mid + 1;
-          } else {
-            leftFlag = mid + 1;
-          }
+        return res;
+        function dfs(i, j) {
+          if (i < 0 || j < 0 || i >= rows || j >= cols) return false;
+          if (grid[ i ][ j ] === 1) return true;
+          grid[ i ][ j ] = 1;
+          const bottom = dfs(i + 1, j)
+          const top = dfs(i - 1, j)
+          const right = dfs(i, j + 1)
+          const left = dfs(i, j - 1);
+          return bottom && top && right && left;
         }
-        return leftFlag - left;
       };
-      console.log(search([2,2], 2));
+      console.log(closedIsland(
+        [
+          [1,1,1,1,1,1,0,0,0,0],
+          [1,1,1,0,0,1,0,1,0,1],
+          [1,1,1,0,1,1,0,1,1,0]
+        ]
+      ))
     </script>
   </body>
 </html>
