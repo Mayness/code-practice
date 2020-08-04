@@ -8,41 +8,22 @@
   </head>
   <body>
     <script>
-      var closedIsland = function(grid) {
-        if (!grid.length || !grid[ 0 ].length) return 0;
-        const rows = grid.length;
-        const cols = grid[ 0 ].length;
-        let res = 0;
-        for (let i = 0; i < rows; i++) {
-          for (let j = 0; j < cols; j++) {
-            if (i === 1 && j === 3) {
-                console.log(i, j);
-              if (grid[ i ][ j ] === 0 && dfs(i, j)) {
-                res++;
-              }
-            }
-            
+      var repeatedSubstringPattern = function(s) {
+        for (let i = 0; i < s.length / 2; i++) {
+          if (s.length % (i + 1) === 0) {
+            const str = s.slice(0, i + 1);
+            if (helper(str.length, str)) return true;
           }
         }
-        return res;
-        function dfs(i, j) {
-          if (i < 0 || j < 0 || i >= rows || j >= cols) return false;
-          if (grid[ i ][ j ] === 1) return true;
-          grid[ i ][ j ] = 1;
-          const bottom = dfs(i + 1, j)
-          const top = dfs(i - 1, j)
-          const right = dfs(i, j + 1)
-          const left = dfs(i, j - 1);
-          return bottom && top && right && left;
+        return false;
+        function helper(start, str) {
+          for (let i = start; i < s.length; i += str.length) {
+            if (s.indexOf(str, i) !== i) return false;
+          }
+          return true;
         }
       };
-      console.log(closedIsland(
-        [
-          [1,1,1,1,1,1,0,0,0,0],
-          [1,1,1,0,0,1,0,1,0,1],
-          [1,1,1,0,1,1,0,1,1,0]
-        ]
-      ))
+      console.log(repeatedSubstringPattern('aba'));
     </script>
   </body>
 </html>
