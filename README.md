@@ -1289,7 +1289,7 @@
         <a href='group/Number/两整数之和✏️.md'>两整数之和✏️</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
