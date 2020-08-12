@@ -1614,6 +1614,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/二叉树/恢复二叉搜索树.md'>恢复二叉搜索树</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/二叉树/搜索二叉树的下个节点.md'>搜索二叉树的下个节点</a>	
       </td>	
       <td style="text-align: center;">	
