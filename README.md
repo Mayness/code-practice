@@ -29,7 +29,7 @@
         <a href='group/Array/动态规划/不同路径系列.md'>不同路径系列</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>0</p>	
+        <p>1</p>	
       </td>	
   </tr>	
     	
@@ -89,7 +89,7 @@
         <a href='group/Array/动态规划/打家劫舍.md'>打家劫舍</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>2</p>	
+        <p>3</p>	
       </td>	
   </tr>	
     	
@@ -99,7 +99,7 @@
         <a href='group/Array/动态规划/爬楼梯.md'>爬楼梯</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
@@ -1393,7 +1393,7 @@
         <a href='group/String/字符串相乘.md'>字符串相乘</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>2</p>	
+        <p>3</p>	
       </td>	
   </tr>	
     	
