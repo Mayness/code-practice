@@ -354,6 +354,16 @@
     	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/排序/ 煎饼排序.md'> 煎饼排序</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/排序/下一个排列.md'>下一个排列</a>	
       </td>	
       <td style="text-align: center;">	
@@ -1486,6 +1496,16 @@
       </td>	
       <td style="text-align: center;">	
         <p>5</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
+        <a href='group/test.md'>test</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
       </td>	
   </tr>	
     	
