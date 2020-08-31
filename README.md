@@ -648,6 +648,16 @@
   	
   <tr>	
     <td style="width: 300px;">	
+        <a href='group/Array/搜索/最少移动次数使数组元素相等 II.md'>最少移动次数使数组元素相等 II</a>	
+      </td>	
+      <td style="text-align: center;">	
+        <p>0</p>	
+      </td>	
+  </tr>	
+    	
+  	
+  <tr>	
+    <td style="width: 300px;">	
         <a href='group/Array/搜索/最长公共前缀.md'>最长公共前缀</a>	
       </td>	
       <td style="text-align: center;">	
