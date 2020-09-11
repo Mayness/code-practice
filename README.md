@@ -293,7 +293,7 @@
         <a href='group/Array/回溯算法/组合总和.md'>组合总和</a>	
       </td>	
       <td style="text-align: center;">	
-        <p>1</p>	
+        <p>2</p>	
       </td>	
   </tr>	
     	
